@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Brock",
+        "order": 1,
+        "type":"rock" ,
+        "biome": "Plains",
+        "level_cap": 21
+    },
+    {
+        "name": "Misty",
+        "order": 2,
+        "type":"water" ,
+        "biome": "Beach/Ocean",
+        "level_cap": 28,
+        "note": "Estimated"
+    },
+    {
+        "name": "Lt. Surge",
+        "order": 3,
+        "type":"elektrik" ,
+        "biome": " savanna Plains",
+        "level_cap": 34,
+        "note": "Estimated"
+    },
+    {
+        "name": "Erika",
+        "order": 4,
+        "type":"leaf" ,
+        "biome": "Forest",
+        "level_cap": 40,
+        "note": "Estimated"
+    },
+    {
+        "name": "Sabrina",
+        "order": 5,
+        "type":"psy" ,
+        "biome": "Dark Forest",
+        "level_cap": 48,
+        "note": "Estimated"
+    },
+    {
+        "name": "Koga",
+        "order": 6,
+        "type":"poison" ,
+        "biome": "Swamp",
+        "level_cap": 55,
+        "note": "Estimated"
+    },
+    {
+        "name": "Blaine",
+        "order": 7,
+        "type":"fire" ,
+        "biome": "Nether",
+        "level_cap": 63,
+        "note": "Estimated"
+    },
+    {
+        "name": "Giovanni",
+        "order": 8,
+        "biome": "deep dark",
+        "level_cap": 72,
+        "note": "Estimated"
+    },
+
+    {
+        "name": "Elite 4",
+        "order": 10,
+        "biome": "Pokémon League Structure",
+        "level_cap": 100,
+        "note": "Estimated"
+    },
+    {
+        "name": "Blue",
+        "order": 11,
+        "biome": "Champion’s Arena Structure",
+        "level_cap": 100,
+        "note": "Estimated, may remove level cap or reset to 25 for Johto"
+    }
+]

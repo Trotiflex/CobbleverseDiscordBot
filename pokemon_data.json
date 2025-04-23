@@ -1,0 +1,3955 @@
+{
+    "bulbasaur": {
+        "evolution": "ivysaur",
+        "method": "Reach level 16"
+    },
+    "ivysaur": {
+        "evolution": "venusaur",
+        "method": "Reach level 32"
+    },
+    "venusaur": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "charmander": {
+        "evolution": "charmeleon",
+        "method": "Reach level 16"
+    },
+    "charmeleon": {
+        "evolution": "charizard",
+        "method": "Reach level 36"
+    },
+    "charizard": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "squirtle": {
+        "evolution": "wartortle",
+        "method": "Reach level 16"
+    },
+    "wartortle": {
+        "evolution": "blastoise",
+        "method": "Reach level 36"
+    },
+    "blastoise": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "caterpie": {
+        "evolution": "metapod",
+        "method": "Reach level 7"
+    },
+    "metapod": {
+        "evolution": "butterfree",
+        "method": "Reach level 10"
+    },
+    "butterfree": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "weedle": {
+        "evolution": "kakuna",
+        "method": "Reach level 7"
+    },
+    "kakuna": {
+        "evolution": "beedrill",
+        "method": "Reach level 10"
+    },
+    "beedrill": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "pidgey": {
+        "evolution": "pidgeotto",
+        "method": "Reach level 18"
+    },
+    "pidgeotto": {
+        "evolution": "pidgeot",
+        "method": "Reach level 36"
+    },
+    "pidgeot": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "rattata": {
+        "evolution": "raticate",
+        "method": "Reach level 20"
+    },
+    "raticate": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "spearow": {
+        "evolution": "fearow",
+        "method": "Reach level 20"
+    },
+    "fearow": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "ekans": {
+        "evolution": "arbok",
+        "method": "Reach level 22"
+    },
+    "arbok": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "pikachu": {
+        "evolution": "raichu",
+        "method": "Use a Thunder Stone"
+    },
+    "raichu": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "sandshrew": {
+        "evolution": "sandslash",
+        "method": "Reach level 22"
+    },
+    "sandslash": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "nidoran-f": {
+        "evolution": "nidorina",
+        "method": "Reach level 16"
+    },
+    "nidorina": {
+        "evolution": "nidoqueen",
+        "method": "Use a Moon Stone"
+    },
+    "nidoqueen": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "nidoran-m": {
+        "evolution": "nidorino",
+        "method": "Reach level 16"
+    },
+    "nidorino": {
+        "evolution": "nidoking",
+        "method": "Use a Moon Stone"
+    },
+    "nidoking": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "clefairy": {
+        "evolution": "clefable",
+        "method": "Use a Moon Stone"
+    },
+    "clefable": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "vulpix": {
+        "evolution": "ninetales",
+        "method": "Use a Fire Stone"
+    },
+    "ninetales": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "jigglypuff": {
+        "evolution": "wigglytuff",
+        "method": "Use a Moon Stone"
+    },
+    "wigglytuff": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "zubat": {
+        "evolution": "golbat",
+        "method": "Reach level 22"
+    },
+    "golbat": {
+        "evolution": "crobat",
+        "method": "High friendship"
+    },
+    "oddish": {
+        "evolution": "gloom",
+        "method": "Reach level 21"
+    },
+    "gloom": {
+        "evolutions": [
+            { "name": "vileplume", "method": "Use a Leaf Stone" },
+            { "name": "bellossom", "method": "Use a Sun Stone" }
+        ]
+    },
+    "vileplume": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "bellossom": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "paras": {
+        "evolution": "parasect",
+        "method": "Reach level 24"
+    },
+    "parasect": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "venonat": {
+        "evolution": "venomoth",
+        "method": "Reach level 31"
+    },
+    "venomoth": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "diglett": {
+        "evolution": "dugtrio",
+        "method": "Reach level 26"
+    },
+    "dugtrio": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "meowth": {
+        "evolution": "persian",
+        "method": "Reach level 28"
+    },
+    "persian": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "psyduck": {
+        "evolution": "golduck",
+        "method": "Reach level 33"
+    },
+    "golduck": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "mankey": {
+        "evolution": "primeape",
+        "method": "Reach level 28"
+    },
+    "primeape": {
+        "evolution": "annihilape",
+        "method": "Use Rage Fist 20 times and level up"
+    },
+    "growlithe": {
+        "evolution": "arcanine",
+        "method": "Use a Fire Stone"
+    },
+    "arcanine": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "poliwag": {
+        "evolution": "poliwhirl",
+        "method": "Reach level 25"
+    },
+    "poliwhirl": {
+        "evolutions": [
+            { "name": "poliwrath", "method": "Use a Water Stone" },
+            { "name": "politoed", "method": "Use a Link Cable while holding a King's Rock" }
+        ]
+    },
+    "poliwrath": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "politoed": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "abra": {
+        "evolution": "kadabra",
+        "method": "Reach level 16"
+    },
+    "kadabra": {
+        "evolution": "alakazam",
+        "method": "Use a Link Cable"
+    },
+    "alakazam": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "machop": {
+        "evolution": "machoke",
+        "method": "Reach level 28"
+    },
+    "machoke": {
+        "evolution": "machamp",
+        "method": "Use a Link Cable"
+    },
+    "machamp": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "bellsprout": {
+        "evolution": "weepinbell",
+        "method": "Reach level 21"
+    },
+    "weepinbell": {
+        "evolution": "victreebel",
+        "method": "Use a Leaf Stone"
+    },
+    "victreebel": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "tentacool": {
+        "evolution": "tentacruel",
+        "method": "Reach level 30"
+    },
+    "tentacruel": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "geodude": {
+        "evolution": "graveler",
+        "method": "Reach level 25"
+    },
+    "graveler": {
+        "evolution": "golem",
+        "method": "Use a Link Cable"
+    },
+    "golem": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "ponyta": {
+        "evolution": "rapidash",
+        "method": "Reach level 40"
+    },
+    "rapidash": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "slowpoke": {
+        "evolutions": [
+            { "name": "slowbro", "method": "Reach level 37" },
+            { "name": "slowking", "method": "Use a Link Cable while holding a King's Rock" }
+        ]
+    },
+    "slowbro": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "slowking": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "magnemite": {
+        "evolution": "magneton",
+        "method": "Reach level 30"
+    },
+    "magneton": {
+        "evolution": "magnezone",
+        "method": "Level up in a magnetic field"
+    },
+    "farfetchd": {
+        "evolution": "sirfetchd",
+        "method": "Land 3 critical hits in one battle and level up"
+    },
+    "doduo": {
+        "evolution": "dodrio",
+        "method": "Reach level 31"
+    },
+    "dodrio": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "seel": {
+        "evolution": "dewgong",
+        "method": "Reach level 34"
+    },
+    "dewgong": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "grimer": {
+        "evolution": "muk",
+        "method": "Reach level 38"
+    },
+    "muk": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "shellder": {
+        "evolution": "cloyster",
+        "method": "Use a Water Stone"
+    },
+    "cloyster": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "gastly": {
+        "evolution": "haunter",
+        "method": "Reach level 25"
+    },
+    "haunter": {
+        "evolution": "gengar",
+        "method": "Use a Link Cable"
+    },
+    "gengar": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "onix": {
+        "evolution": "steelix",
+        "method": "Use a Link Cable while holding a Metal Coat"
+    },
+    "drowzee": {
+        "evolution": "hypno",
+        "method": "Reach level 26"
+    },
+    "hypno": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "krabby": {
+        "evolution": "kingler",
+        "method": "Reach level 28"
+    },
+    "kingler": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "voltorb": {
+        "evolution": "electrode",
+        "method": "Reach level 30"
+    },
+    "electrode": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "exeggcute": {
+        "evolution": "exeggutor",
+        "method": "Use a Leaf Stone"
+    },
+    "exeggutor": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "cubone": {
+        "evolution": "marowak",
+        "method": "Reach level 28"
+    },
+    "marowak": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "hitmonlee": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "hitmonchan": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "lickitung": {
+        "evolution": "lickilicky",
+        "method": "Level up knowing Rollout"
+    },
+    "koffing": {
+        "evolution": "weezing",
+        "method": "Reach level 35"
+    },
+    "weezing": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "rhyhorn": {
+        "evolution": "rhydon",
+        "method": "Reach level 42"
+    },
+    "rhydon": {
+        "evolution": "rhyperior",
+        "method": "Use a Link Cable while holding a Protector"
+    },
+    "chansey": {
+        "evolution": "blissey",
+        "method": "High friendship"
+    },
+    "tangela": {
+        "evolution": "tangrowth",
+        "method": "Level up knowing Ancient Power"
+    },
+    "kangaskhan": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "horsea": {
+        "evolution": "seadra",
+        "method": "Reach level 32"
+    },
+    "seadra": {
+        "evolution": "kingdra",
+        "method": "Use a Link Cable while holding a Dragon Scale"
+    },
+    "goldeen": {
+        "evolution": "seaking",
+        "method": "Reach level 33"
+    },
+    "seaking": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "staryu": {
+        "evolution": "starmie",
+        "method": "Use a Water Stone"
+    },
+    "starmie": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "mr-mime": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "scyther": {
+        "evolution": "scizor",
+        "method": "Use a Link Cable while holding a Metal Coat"
+    },
+    "jynx": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "electabuzz": {
+        "evolution": "electivire",
+        "method": "Use a Link Cable while holding an Electirizer"
+    },
+    "magmar": {
+        "evolution": "magmortar",
+        "method": "Use a Link Cable while holding a Magmarizer"
+    },
+    "pinsir": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "tauros": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "magikarp": {
+        "evolution": "gyarados",
+        "method": "Reach level 20"
+    },
+    "gyarados": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "lapras": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "ditto": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "eevee": {
+        "evolutions": [
+            { "name": "vaporeon", "method": "Use a Water Stone" },
+            { "name": "jolteon", "method": "Use a Thunder Stone" },
+            { "name": "flareon", "method": "Use a Fire Stone" }
+        ]
+    },
+    "vaporeon": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "jolteon": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "flareon": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "porygon": {
+        "evolution": "porygon2",
+        "method": "Use a Link Cable while holding an Up-Grade"
+    },
+    "omanyte": {
+        "evolution": "omastar",
+        "method": "Reach level 40"
+    },
+    "omastar": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "kabuto": {
+        "evolution": "kabutops",
+        "method": "Reach level 40"
+    },
+    "kabutops": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "aerodactyl": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "snorlax": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "articuno": {
+        "evolution": null,
+        "method": "Does not evolve (spawns in ice biomes)"
+    },
+    "zapdos": {
+        "evolution": null,
+        "method": "Does not evolve (spawns in plains or mountains)"
+    },
+    "moltres": {
+        "evolution": null,
+        "method": "Does not evolve (spawns in volcanic biomes)"
+    },
+    "dratini": {
+        "evolution": "dragonair",
+        "method": "Reach level 30"
+    },
+    "dragonair": {
+        "evolution": "dragonite",
+        "method": "Reach level 55"
+    },
+    "dragonite": {
+        "evolution": null,
+        "method": "Does not evolve"
+    },
+    "mewtwo": {
+        "evolution": null,
+        "method": "Does not evolve (spawns in the overworld)"
+    },
+    "mew": {
+        "evolution": null,
+        "method": "Does not evolve (spawns in the overworld)"
+    },
+
+        "chikorita": {
+            "evolution": "bayleef",
+            "method": "Reach level 16"
+        },
+        "bayleef": {
+            "evolution": "meganium",
+            "method": "Reach level 32"
+        },
+        "meganium": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "cyndaquil": {
+            "evolution": "quilava",
+            "method": "Reach level 14"
+        },
+        "quilava": {
+            "evolution": "typhlosion",
+            "method": "Reach level 36"
+        },
+        "typhlosion": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "totodile": {
+            "evolution": "croconaw",
+            "method": "Reach level 18"
+        },
+        "croconaw": {
+            "evolution": "feraligatr",
+            "method": "Reach level 30"
+        },
+        "feraligatr": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "sentret": {
+            "evolution": "furret",
+            "method": "Reach level 15"
+        },
+        "furret": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "hoothoot": {
+            "evolution": "noctowl",
+            "method": "Reach level 20"
+        },
+        "noctowl": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "ledyba": {
+            "evolution": "ledian",
+            "method": "Reach level 18"
+        },
+        "ledian": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "spinarak": {
+            "evolution": "ariados",
+            "method": "Reach level 22"
+        },
+        "ariados": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "chinchou": {
+            "evolution": "lanturn",
+            "method": "Reach level 27"
+        },
+        "lanturn": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "togepi": {
+            "evolution": "togetic",
+            "method": "High friendship"
+        },
+        "togetic": {
+            "evolution": "togekiss",
+            "method": "Use a Shiny Stone"
+        },
+        "togekiss": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "natu": {
+            "evolution": "xatu",
+            "method": "Reach level 25"
+        },
+        "xatu": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "mareep": {
+            "evolution": "flaaffy",
+            "method": "Reach level 15"
+        },
+        "flaaffy": {
+            "evolution": "ampharos",
+            "method": "Reach level 30"
+        },
+        "ampharos": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "marill": {
+            "evolution": "azumarill",
+            "method": "Reach level 18"
+        },
+        "azumarill": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "sudowoodo": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "hoppip": {
+            "evolution": "skiploom",
+            "method": "Reach level 18"
+        },
+        "skiploom": {
+            "evolution": "jumpluff",
+            "method": "Reach level 27"
+        },
+        "jumpluff": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "aipom": {
+            "evolution": "ambipom",
+            "method": "Level up knowing Double Hit"
+        },
+        "sunkern": {
+            "evolution": "sunflora",
+            "method": "Use a Sun Stone"
+        },
+        "sunflora": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "yanma": {
+            "evolution": "yanmega",
+            "method": "Level up knowing Ancient Power"
+        },
+        "wooper": {
+            "evolution": "quagsire",
+            "method": "Reach level 20"
+        },
+        "quagsire": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "murkrow": {
+            "evolution": "honchkrow",
+            "method": "Use a Dusk Stone"
+        },
+        "misdreavus": {
+            "evolution": "mismagius",
+            "method": "Use a Dusk Stone"
+        },
+        "unown": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "wobbuffet": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "girafarig": {
+            "evolution": "farigiraf",
+            "method": "Level up knowing Twin Beam"
+        },
+        "pineco": {
+            "evolution": "forretress",
+            "method": "Reach level 31"
+        },
+        "forretress": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "dunsparce": {
+            "evolution": "dudunsparce",
+            "method": "Level up knowing Hyper Drill"
+        },
+        "gligar": {
+            "evolution": "gliscor",
+            "method": "Level up at night holding a Razor Fang"
+        },
+        "snubbull": {
+            "evolution": "granbull",
+            "method": "Reach level 23"
+        },
+        "granbull": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "qwilfish": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "shuckle": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "heracross": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "sneasel": {
+            "evolution": "weavile",
+            "method": "Level up at night holding a Razor Claw"
+        },
+        "teddiursa": {
+            "evolution": "ursaring",
+            "method": "Reach level 30"
+        },
+        "ursaring": {
+            "evolution": "ursaluna",
+            "method": "Use a Peat Block during a full moon"
+        },
+        "slugma": {
+            "evolution": "magcargo",
+            "method": "Reach level 38"
+        },
+        "magcargo": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "swinub": {
+            "evolution": "piloswine",
+            "method": "Reach level 33"
+        },
+        "piloswine": {
+            "evolution": "mamoswine",
+            "method": "Level up knowing Ancient Power"
+        },
+        "corsola": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "remoraid": {
+            "evolution": "octillery",
+            "method": "Reach level 25"
+        },
+        "octillery": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "delibird": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "mantine": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "skarmory": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "houndour": {
+            "evolution": "houndoom",
+            "method": "Reach level 24"
+        },
+        "houndoom": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "phanpy": {
+            "evolution": "donphan",
+            "method": "Reach level 25"
+        },
+        "donphan": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "stantler": {
+            "evolution": "wyrdeer",
+            "method": "Use Psyshield Bash 20 times in Agile Style and level up"
+        },
+        "smeargle": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "miltank": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "raikou": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in plains or savanna)"
+        },
+        "entei": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in volcanic biomes)"
+        },
+        "suicune": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in aquatic biomes)"
+        },
+        "larvitar": {
+            "evolution": "pupitar",
+            "method": "Reach level 30"
+        },
+        "pupitar": {
+            "evolution": "tyranitar",
+            "method": "Reach level 55"
+        },
+        "tyranitar": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "lugia": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in deep ocean when raining)"
+        },
+        "ho-oh": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in bell tower"
+        },
+        "celebi": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in forests or ilex shrine)"
+        },
+        "treecko": {
+            "evolution": "grovyle",
+            "method": "Reach level 16"
+        },
+        "grovyle": {
+            "evolution": "sceptile",
+            "method": "Reach level 36"
+        },
+        "sceptile": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "torchic": {
+            "evolution": "combusken",
+            "method": "Reach level 16"
+        },
+        "combusken": {
+            "evolution": "blaziken",
+            "method": "Reach level 36"
+        },
+        "blaziken": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "mudkip": {
+            "evolution": "marshtomp",
+            "method": "Reach level 16"
+        },
+        "marshtomp": {
+            "evolution": "swampert",
+            "method": "Reach level 36"
+        },
+        "swampert": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "poochyena": {
+            "evolution": "mightyena",
+            "method": "Reach level 18"
+        },
+        "mightyena": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "zigzagoon": {
+            "evolution": "linoone",
+            "method": "Reach level 20"
+        },
+        "linoone": {
+            "evolution": "obstagoon",
+            "method": "Reach level 35 at night (Galarian form)"
+        },
+        "wurmple": {
+            "evolutions": [
+                { "name": "silcoon", "method": "Reach level 7 (random, personality-based)" },
+                { "name": "cascoon", "method": "Reach level 7 (random, personality-based)" }
+            ]
+        },
+        "silcoon": {
+            "evolution": "beautifly",
+            "method": "Reach level 10"
+        },
+        "beautifly": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "cascoon": {
+            "evolution": "dustox",
+            "method": "Reach level 10"
+        },
+        "dustox": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "lotad": {
+            "evolution": "lombre",
+            "method": "Reach level 14"
+        },
+        "lombre": {
+            "evolution": "ludicolo",
+            "method": "Use a Water Stone"
+        },
+        "ludicolo": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "seedot": {
+            "evolution": "nuzleaf",
+            "method": "Reach level 14"
+        },
+        "nuzleaf": {
+            "evolution": "shiftry",
+            "method": "Use a Leaf Stone"
+        },
+        "shiftry": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "taillow": {
+            "evolution": "swellow",
+            "method": "Reach level 22"
+        },
+        "swellow": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "wingull": {
+            "evolution": "pelipper",
+            "method": "Reach level 25"
+        },
+        "pelipper": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "ralts": {
+            "evolution": "kirlia",
+            "method": "Reach level 20"
+        },
+        "kirlia": {
+            "evolutions": [
+                { "name": "gardevoir", "method": "Reach level 30" },
+                { "name": "gallade", "method": "Use a Dawn Stone on male Kirlia" }
+            ]
+        },
+        "gardevoir": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "gallade": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "surskit": {
+            "evolution": "masquerain",
+            "method": "Reach level 22"
+        },
+        "masquerain": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "whismur": {
+            "evolution": "loudred",
+            "method": "Reach level 20"
+        },
+        "loudred": {
+            "evolution": "exploud",
+            "method": "Reach level 40"
+        },
+        "exploud": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "makuhita": {
+            "evolution": "hariyama",
+            "method": "Reach level 24"
+        },
+        "hariyama": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "nosepass": {
+            "evolution": "probopass",
+            "method": "Level up in a magnetic field"
+        },
+        "skitty": {
+            "evolution": "delcatty",
+            "method": "Use a Moon Stone"
+        },
+        "delcatty": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "sableye": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "mawile": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "aron": {
+            "evolution": "lairon",
+            "method": "Reach level 32"
+        },
+        "lairon": {
+            "evolution": "aggron",
+            "method": "Reach level 42"
+        },
+        "aggron": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "meditite": {
+            "evolution": "medicham",
+            "method": "Reach level 37"
+        },
+        "medicham": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "electrike": {
+            "evolution": "manectric",
+            "method": "Reach level 26"
+        },
+        "manectric": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "plusle": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "minun": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "volbeat": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "illumise": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "roselia": {
+            "evolution": "roserade",
+            "method": "Use a Shiny Stone"
+        },
+        "gulpin": {
+            "evolution": "swalot",
+            "method": "Reach level 26"
+        },
+        "swalot": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "carvanha": {
+            "evolution": "sharpedo",
+            "method": "Reach level 30"
+        },
+        "sharpedo": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "wailmer": {
+            "evolution": "wailord",
+            "method": "Reach level 40"
+        },
+        "wailord": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "numel": {
+            "evolution": "camerupt",
+            "method": "Reach level 33"
+        },
+        "camerupt": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "torkoal": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "spoink": {
+            "evolution": "grumpig",
+            "method": "Reach level 32"
+        },
+        "grumpig": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "spinda": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "trapinch": {
+            "evolution": "vibrava",
+            "method": "Reach level 35"
+        },
+        "vibrava": {
+            "evolution": "flygon",
+            "method": "Reach level 45"
+        },
+        "flygon": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "cacnea": {
+            "evolution": "cacturne",
+            "method": "Reach level 32"
+        },
+        "cacturne": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "swablu": {
+            "evolution": "altaria",
+            "method": "Reach level 35"
+        },
+        "altaria": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "zangoose": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "seviper": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "lunatone": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "solrock": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "barboach": {
+            "evolution": "whiscash",
+            "method": "Reach level 30"
+        },
+        "whiscash": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "corphish": {
+            "evolution": "crawdaunt",
+            "method": "Reach level 30"
+        },
+        "crawdaunt": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "baltoy": {
+            "evolution": "claydol",
+            "method": "Reach level 36"
+        },
+        "claydol": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "lileep": {
+            "evolution": "cradily",
+            "method": "Reach level 40"
+        },
+        "cradily": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "anorith": {
+            "evolution": "armaldo",
+            "method": "Reach level 40"
+        },
+        "armaldo": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "feebas": {
+            "evolution": "milotic",
+            "method": "Use a Link Cable while holding a Prism Scale"
+        },
+        "milotic": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "castform": {
+            "evolution": null,
+            "method": "Does not evolve (changes form with weather)"
+        },
+        "kecleon": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "shuppet": {
+            "evolution": "banette",
+            "method": "Reach level 37"
+        },
+        "banette": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "duskull": {
+            "evolution": "dusclops",
+            "method": "Reach level 37"
+        },
+        "dusclops": {
+            "evolution": "dusknoir",
+            "method": "Use a Link Cable while holding a Reaper Cloth"
+        },
+        "tropius": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "chimecho": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "absol": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "snorunt": {
+            "evolutions": [
+                { "name": "glalie", "method": "Reach level 42" },
+                { "name": "froslass", "method": "Use a Dawn Stone on female Snorunt" }
+            ]
+        },
+        "glalie": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "froslass": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "spheal": {
+            "evolution": "sealeo",
+            "method": "Reach level 32"
+        },
+        "sealeo": {
+            "evolution": "walrein",
+            "method": "Reach level 44"
+        },
+        "walrein": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "clamperl": {
+            "evolutions": [
+                { "name": "huntail", "method": "Use a Link Cable while holding a Deep Sea Tooth" },
+                { "name": "gorebyss", "method": "Use a Link Cable while holding a Deep Sea Scale" }
+            ]
+        },
+        "huntail": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "gorebyss": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "relicanth": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "luvdisc": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "bagon": {
+            "evolution": "shelgon",
+            "method": "Reach level 30"
+        },
+        "shelgon": {
+            "evolution": "salamence",
+            "method": "Reach level 50"
+        },
+        "salamence": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "beldum": {
+            "evolution": "metang",
+            "method": "Reach level 20"
+        },
+        "metang": {
+            "evolution": "metagross",
+            "method": "Reach level 45"
+        },
+        "metagross": {
+            "evolution": null,
+            "method": "Does not evolve"
+        },
+        "regirock": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in biome mesa in a regirock-cave)"
+        },
+        "regice": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in a ice biome in a regice-cave)"
+        },
+        "registeel": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in mountain biome in a registeel-cave)"
+        },
+        "latias": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in plaine biome)"
+        },
+        "latios": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in plaine biome)"
+        },
+        "kyogre": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in ocean biome while it's raining)"
+        },
+        "groudon": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in red sand biome)"
+        },
+        "rayquaza": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in mountain biome and in the End , shiny, level 100)"
+        },
+        "jirachi": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in the end, mountain or hills in the night)"
+        },
+        "deoxys": {
+            "evolution": null,
+            "method": "Does not evolve (spawns in the birth island)"
+        },
+        
+            "turtwig": {
+                "evolution": "grotle",
+                "method": "Reach level 18"
+            },
+            "grotle": {
+                "evolution": "torterra",
+                "method": "Reach level 32"
+            },
+            "torterra": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "chimchar": {
+                "evolution": "monferno",
+                "method": "Reach level 14"
+            },
+            "monferno": {
+                "evolution": "infernape",
+                "method": "Reach level 36"
+            },
+            "infernape": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "piplup": {
+                "evolution": "prinplup",
+                "method": "Reach level 16"
+            },
+            "prinplup": {
+                "evolution": "empoleon",
+                "method": "Reach level 36"
+            },
+            "empoleon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "starly": {
+                "evolution": "staravia",
+                "method": "Reach level 14"
+            },
+            "staravia": {
+                "evolution": "staraptor",
+                "method": "Reach level 34"
+            },
+            "staraptor": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "bidoof": {
+                "evolution": "bibarel",
+                "method": "Reach level 15"
+            },
+            "bibarel": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "kricketot": {
+                "evolution": "kricketune",
+                "method": "Reach level 10"
+            },
+            "kricketune": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "shinx": {
+                "evolution": "luxio",
+                "method": "Reach level 15"
+            },
+            "luxio": {
+                "evolution": "luxray",
+                "method": "Reach level 30"
+            },
+            "luxray": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "budew": {
+                "evolution": "roselia",
+                "method": "High friendship during the day"
+            },
+            
+            "roserade": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "cranidos": {
+                "evolution": "rampardos",
+                "method": "Reach level 30"
+            },
+            "rampardos": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "shieldon": {
+                "evolution": "bastiodon",
+                "method": "Reach level 30"
+            },
+            "bastiodon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "burmy": {
+                "evolutions": [
+                    { "name": "wormadam-plant", "method": "Reach level 20 (female, Plant Cloak)" },
+                    { "name": "wormadam-sandy", "method": "Reach level 20 (female, Sandy Cloak)" },
+                    { "name": "wormadam-trash", "method": "Reach level 20 (female, Trash Cloak)" },
+                    { "name": "mothim", "method": "Reach level 20 (male)" }
+                ]
+            },
+            "wormadam-plant": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "wormadam-sandy": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "wormadam-trash": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "mothim": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "combee": {
+                "evolution": "vespiquen",
+                "method": "Reach level 21 (female only)"
+            },
+            "vespiquen": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "pachirisu": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "buizel": {
+                "evolution": "floatzel",
+                "method": "Reach level 26"
+            },
+            "floatzel": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "cherubi": {
+                "evolution": "cherrim",
+                "method": "Reach level 25"
+            },
+            "cherrim": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "shellos": {
+                "evolution": "gastrodon",
+                "method": "Reach level 30"
+            },
+            "gastrodon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "ambipom": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "drifloon": {
+                "evolution": "drifblim",
+                "method": "Reach level 28"
+            },
+            "drifblim": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "buneary": {
+                "evolution": "lopunny",
+                "method": "High friendship"
+            },
+            "lopunny": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "mismagius": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "honchkrow": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "glameow": {
+                "evolution": "purugly",
+                "method": "Reach level 38"
+            },
+            "purugly": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "chingling": {
+                "evolution": "chimecho",
+                "method": "High friendship at night"
+            },
+            "stunky": {
+                "evolution": "skuntank",
+                "method": "Reach level 34"
+            },
+            "skuntank": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "bronzor": {
+                "evolution": "bronzong",
+                "method": "Reach level 33"
+            },
+            "bronzong": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "bonsly": {
+                "evolution": "sudowoodo",
+                "method": "Level up knowing Mimic"
+            },
+            "mime-jr": {
+                "evolution": "mr-mime",
+                "method": "Level up knowing Mimic"
+            },
+            "happiny": {
+                "evolution": "chansey",
+                "method": "Level up during the day holding an Oval Stone"
+            },
+            "chatot": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "spiritomb": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "gible": {
+                "evolution": "gabite",
+                "method": "Reach level 24"
+            },
+            "gabite": {
+                "evolution": "garchomp",
+                "method": "Reach level 48"
+            },
+            "garchomp": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "munchlax": {
+                "evolution": "snorlax",
+                "method": "High friendship"
+            },
+            "riolu": {
+                "evolution": "lucario",
+                "method": "High friendship during the day"
+            },
+            "lucario": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "hippopotas": {
+                "evolution": "hippowdon",
+                "method": "Reach level 34"
+            },
+            "hippowdon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "skorupi": {
+                "evolution": "drapion",
+                "method": "Reach level 40"
+            },
+            "drapion": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "croagunk": {
+                "evolution": "toxicroak",
+                "method": "Reach level 37"
+            },
+            "toxicroak": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "carnivine": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "finneon": {
+                "evolution": "lumineon",
+                "method": "Reach level 31"
+            },
+            "lumineon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "mantyke": {
+                "evolution": "mantine",
+                "method": "Level up with a Remoraid in the party"
+            },
+            "snover": {
+                "evolution": "abomasnow",
+                "method": "Reach level 40"
+            },
+            "abomasnow": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "weavile": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "magnezone": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "lickilicky": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "rhyperior": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "tangrowth": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "electivire": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "magmortar": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "yanmega": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "leafeon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "glaceon": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "gliscor": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "mamoswine": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "porygon-z": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "probopass": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            "dusknoir": {
+                "evolution": null,
+                "method": "Does not evolve"
+            },
+            
+            "rotom": {
+                "evolution": null,
+                "method": "Does not evolve (changes forms: Heat, Wash, Frost, Fan, Mow)"
+            },
+            "uxie": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in river)"
+            },
+            "mesprit": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in river)"
+            },
+            "azelf": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in custom river)"
+            },
+            "dialga": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in peak biome)"
+            },
+            "palkia": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in beach and lukewarm ocean biome with a clear sky)"
+            },
+            "heatran": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in the nether)"
+            },
+            "regigigas": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in stony peaks and the snowpoint temple)"
+            },
+            "giratina": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in the end and the nether (on the roof))"
+            },
+            "cresselia": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in floral biome with natural flower)"
+            },
+            "phione": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in aquatic biomes)"
+            },
+            "manaphy": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in aquatic biomes)"
+            },
+            "darkrai": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in the deep dark biome and spooky)"
+            },
+            "shaymin": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in forests and meadow, Land or Sky Form)"
+            },
+            "arceus": {
+                "evolution": null,
+                "method": "Does not evolve (spawns in the end)"
+            },
+    
+                "victini": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in savanna biome)"
+                },
+                "snivy": {
+                    "evolution": "servine",
+                    "method": "Reach level 17"
+                },
+                "servine": {
+                    "evolution": "serperior",
+                    "method": "Reach level 36"
+                },
+                "serperior": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "tepig": {
+                    "evolution": "pignite",
+                    "method": "Reach level 17"
+                },
+                "pignite": {
+                    "evolution": "emboar",
+                    "method": "Reach level 36"
+                },
+                "emboar": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "oshawott": {
+                    "evolution": "dewott",
+                    "method": "Reach level 17"
+                },
+                "dewott": {
+                    "evolution": "samurott",
+                    "method": "Reach level 36"
+                },
+                "samurott": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "patrat": {
+                    "evolution": "watchog",
+                    "method": "Reach level 20"
+                },
+                "watchog": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "lillipup": {
+                    "evolution": "herdier",
+                    "method": "Reach level 16"
+                },
+                "herdier": {
+                    "evolution": "stoutland",
+                    "method": "Reach level 32"
+                },
+                "stoutland": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "purrloin": {
+                    "evolution": "liepard",
+                    "method": "Reach level 20"
+                },
+                "liepard": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "pansage": {
+                    "evolution": "simisage",
+                    "method": "Use a Leaf Stone"
+                },
+                "simisage": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "pansear": {
+                    "evolution": "simisear",
+                    "method": "Use a Fire Stone"
+                },
+                "simisear": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "panpour": {
+                    "evolution": "simipour",
+                    "method": "Use a Water Stone"
+                },
+                "simipour": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "munna": {
+                    "evolution": "musharna",
+                    "method": "Use a Moon Stone"
+                },
+                "musharna": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "pidove": {
+                    "evolution": "tranquill",
+                    "method": "Reach level 21"
+                },
+                "tranquill": {
+                    "evolution": "unfezant",
+                    "method": "Reach level 32"
+                },
+                "unfezant": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "blitzle": {
+                    "evolution": "zebstrika",
+                    "method": "Reach level 27"
+                },
+                "zebstrika": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "roggenrola": {
+                    "evolution": "boldore",
+                    "method": "Reach level 25"
+                },
+                "boldore": {
+                    "evolution": "gigalith",
+                    "method": "Use a Link Cable"
+                },
+                "gigalith": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "woobat": {
+                    "evolution": "swoobat",
+                    "method": "High friendship"
+                },
+                "swoobat": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "drilbur": {
+                    "evolution": "excadrill",
+                    "method": "Reach level 31"
+                },
+                "excadrill": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "audino": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "timburr": {
+                    "evolution": "gurdurr",
+                    "method": "Reach level 25"
+                },
+                "gurdurr": {
+                    "evolution": "conkeldurr",
+                    "method": "Use a Link Cable"
+                },
+                "conkeldurr": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "tympole": {
+                    "evolution": "palpitoad",
+                    "method": "Reach level 25"
+                },
+                "palpitoad": {
+                    "evolution": "seismitoad",
+                    "method": "Reach level 36"
+                },
+                "seismitoad": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "throh": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "sawk": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "sewaddle": {
+                    "evolution": "swadloon",
+                    "method": "Reach level 20"
+                },
+                "swadloon": {
+                    "evolution": "leavanny",
+                    "method": "High friendship"
+                },
+                "leavanny": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "venipede": {
+                    "evolution": "whirlipede",
+                    "method": "Reach level 22"
+                },
+                "whirlipede": {
+                    "evolution": "scolipede",
+                    "method": "Reach level 30"
+                },
+                "scolipede": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "cottonee": {
+                    "evolution": "whimsicott",
+                    "method": "Use a Sun Stone"
+                },
+                "whimsicott": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "petilil": {
+                    "evolution": "lilligant",
+                    "method": "Use a Sun Stone"
+                },
+                "lilligant": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "basculin": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "sandile": {
+                    "evolution": "krokorok",
+                    "method": "Reach level 29"
+                },
+                "krokorok": {
+                    "evolution": "krookodile",
+                    "method": "Reach level 40"
+                },
+                "krookodile": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "darumaka": {
+                    "evolution": "darmanitan",
+                    "method": "Reach level 35"
+                },
+                "darmanitan": {
+                    "evolution": null,
+                    "method": "Does not evolve (Standard or Zen Mode)"
+                },
+                "maractus": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "dwebble": {
+                    "evolution": "crustle",
+                    "method": "Reach level 34"
+                },
+                "crustle": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "scraggy": {
+                    "evolution": "scrafty",
+                    "method": "Reach level 39"
+                },
+                "scrafty": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "sigilyph": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "yamask": {
+                    "evolution": "cofagrigus",
+                    "method": "Reach level 34"
+                },
+                "cofagrigus": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "tirtouga": {
+                    "evolution": "carracosta",
+                    "method": "Reach level 37"
+                },
+                "carracosta": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "archen": {
+                    "evolution": "archeops",
+                    "method": "Reach level 37"
+                },
+                "archeops": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "trubbish": {
+                    "evolution": "garbodor",
+                    "method": "Reach level 36"
+                },
+                "garbodor": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "zorua": {
+                    "evolution": "zoroark",
+                    "method": "Reach level 30"
+                },
+                "zoroark": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "minccino": {
+                    "evolution": "cinccino",
+                    "method": "Use a Shiny Stone"
+                },
+                "cinccino": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "gothita": {
+                    "evolution": "gothorita",
+                    "method": "Reach level 32"
+                },
+                "gothorita": {
+                    "evolution": "gothitelle",
+                    "method": "Reach level 41"
+                },
+                "gothitelle": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "solosis": {
+                    "evolution": "duosion",
+                    "method": "Reach level 32"
+                },
+                "duosion": {
+                    "evolution": "reuniclus",
+                    "method": "Reach level 41"
+                },
+                "reuniclus": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "ducklett": {
+                    "evolution": "swanna",
+                    "method": "Reach level 35"
+                },
+                "swanna": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "vanillite": {
+                    "evolution": "vanillish",
+                    "method": "Reach level 35"
+                },
+                "vanillish": {
+                    "evolution": "vanilluxe",
+                    "method": "Reach level 47"
+                },
+                "vanilluxe": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "deerling": {
+                    "evolution": "sawsbuck",
+                    "method": "Reach level 34"
+                },
+                "sawsbuck": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "emolga": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "karrablast": {
+                    "evolution": "escavalier",
+                    "method": "Use a Link Cable while near Shelmet"
+                },
+                "escavalier": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "foongus": {
+                    "evolution": "amoonguss",
+                    "method": "Reach level 39"
+                },
+                "amoonguss": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "frillish": {
+                    "evolution": "jellicent",
+                    "method": "Reach level 40"
+                },
+                "jellicent": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "alomomola": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "joltik": {
+                    "evolution": "galvantula",
+                    "method": "Reach level 36"
+                },
+                "galvantula": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "ferroseed": {
+                    "evolution": "ferrothorn",
+                    "method": "Reach level 40"
+                },
+                "ferrothorn": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "klink": {
+                    "evolution": "klang",
+                    "method": "Reach level 38"
+                },
+                "klang": {
+                    "evolution": "klinklang",
+                    "method": "Reach level 49"
+                },
+                "klinklang": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "tynamo": {
+                    "evolution": "eelektrik",
+                    "method": "Reach level 39"
+                },
+                "eelektrik": {
+                    "evolution": "eelektross",
+                    "method": "Use a Thunder Stone"
+                },
+                "eelektross": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "elgyem": {
+                    "evolution": "beheeyem",
+                    "method": "Reach level 42"
+                },
+                "beheeyem": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "litwick": {
+                    "evolution": "lampent",
+                    "method": "Reach level 41"
+                },
+                "lampent": {
+                    "evolution": "chandelure",
+                    "method": "Use a Dusk Stone"
+                },
+                "chandelure": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "axew": {
+                    "evolution": "fraxure",
+                    "method": "Reach level 38"
+                },
+                "fraxure": {
+                    "evolution": "haxorus",
+                    "method": "Reach level 48"
+                },
+                "haxorus": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "cubchoo": {
+                    "evolution": "beartic",
+                    "method": "Reach level 37"
+                },
+                "beartic": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "cryogonal": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "shelmet": {
+                    "evolution": "accelgor",
+                    "method": "Use a Link Cable while near Karrablast"
+                },
+                "accelgor": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "stunfisk": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "mienfoo": {
+                    "evolution": "mienshao",
+                    "method": "Reach level 50"
+                },
+                "mienshao": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "druddigon": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "golett": {
+                    "evolution": "golurk",
+                    "method": "Reach level 43"
+                },
+                "golurk": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "pawniard": {
+                    "evolution": "bisharp",
+                    "method": "Reach level 52"
+                },
+                "bisharp": {
+                    "evolution": "kingambit",
+                    "method": "Level up after defeating 3 Bisharp holding Leader's Crest"
+                },
+                "kingambit": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "bouffalant": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "rufflet": {
+                    "evolution": "braviary",
+                    "method": "Reach level 54"
+                },
+                "braviary": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "vullaby": {
+                    "evolution": "mandibuzz",
+                    "method": "Reach level 54"
+                },
+                "mandibuzz": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "heatmor": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "durant": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "deino": {
+                    "evolution": "zweilous",
+                    "method": "Reach level 50"
+                },
+                "zweilous": {
+                    "evolution": "hydreigon",
+                    "method": "Reach level 64"
+                },
+                "hydreigon": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "larvesta": {
+                    "evolution": "volcarona",
+                    "method": "Reach level 59"
+                },
+                "volcarona": {
+                    "evolution": null,
+                    "method": "Does not evolve"
+                },
+                "cobalion": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in plains)"
+                },
+                "terrakion": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in stony peaks)"
+                },
+                "virizion": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in forest)"
+                },
+                "tornadus": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in savanna, Incarnate or Therian Form)"
+                },
+                "thundurus": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in savanna, Incarnate or Therian Form)"
+                },
+                "reshiram": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in mountains with clear sky)"
+                },
+                "zekrom": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in mountains)"
+                },
+                "landorus": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in savanna, Incarnate or Therian Form)"
+                },
+                "kyurem": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in ice biome, Normal, Black, or White Form)"
+                },
+                "keldeo": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in river or mountain or sword mountain)"
+                },
+                "meloetta": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns in meadow or sunflower plains, Aria or Pirouette Form)"
+                },
+                "genesect": {
+                    "evolution": null,
+                    "method": "Does not evolve (spawns idk )"
+                },
+                
+                    "chespin": {
+                        "evolution": "quilladin",
+                        "method": "Reach level 16"
+                    },
+                    "quilladin": {
+                        "evolution": "chesnaught",
+                        "method": "Reach level 36"
+                    },
+                    "chesnaught": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "fennekin": {
+                        "evolution": "braixen",
+                        "method": "Reach level 16"
+                    },
+                    "braixen": {
+                        "evolution": "delphox",
+                        "method": "Reach level 36"
+                    },
+                    "delphox": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "froakie": {
+                        "evolution": "frogadier",
+                        "method": "Reach level 16"
+                    },
+                    "frogadier": {
+                        "evolution": "greninja",
+                        "method": "Reach level 36"
+                    },
+                    "greninja": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "bunnelby": {
+                        "evolution": "diggersby",
+                        "method": "Reach level 20"
+                    },
+                    "diggersby": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "fletchling": {
+                        "evolution": "fletchinder",
+                        "method": "Reach level 17"
+                    },
+                    "fletchinder": {
+                        "evolution": "talonflame",
+                        "method": "Reach level 35"
+                    },
+                    "talonflame": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "scatterbug": {
+                        "evolution": "spewpa",
+                        "method": "Reach level 9"
+                    },
+                    "spewpa": {
+                        "evolution": "vivillon",
+                        "method": "Reach level 12"
+                    },
+                    "vivillon": {
+                        "evolution": null,
+                        "method": "Does not evolve (multiple patterns)"
+                    },
+                    "litleo": {
+                        "evolution": "pyroar",
+                        "method": "Reach level 35"
+                    },
+                    "pyroar": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "flabebe": {
+                        "evolution": "floette",
+                        "method": "Reach level 19"
+                    },
+                    "floette": {
+                        "evolution": "florges",
+                        "method": "Use a Shiny Stone"
+                    },
+                    "florges": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "skiddo": {
+                        "evolution": "gogoat",
+                        "method": "Reach level 32"
+                    },
+                    "gogoat": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "pancham": {
+                        "evolution": "pangoro",
+                        "method": "Reach level 32 with a Dark-type in the party"
+                    },
+                    "pangoro": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "furfrou": {
+                        "evolution": null,
+                        "method": "Does not evolve (changes trims)"
+                    },
+                    "espurr": {
+                        "evolution": "meowstic",
+                        "method": "Reach level 25"
+                    },
+                    "meowstic": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "honedge": {
+                        "evolution": "doublade",
+                        "method": "Reach level 35"
+                    },
+                    "doublade": {
+                        "evolution": "aegislash",
+                        "method": "Use a Dusk Stone"
+                    },
+                    "aegislash": {
+                        "evolution": null,
+                        "method": "Does not evolve (Shield or Blade Form)"
+                    },
+                    "spritzee": {
+                        "evolution": "aromatisse",
+                        "method": "Use a Link Cable while holding a Sachet"
+                    },
+                    "aromatisse": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "swirlix": {
+                        "evolution": "slurpuff",
+                        "method": "Use a Link Cable while holding a Whipped Dream"
+                    },
+                    "slurpuff": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "inkay": {
+                        "evolution": "malamar",
+                        "method": "Reach level 30 while holding the device upside down"
+                    },
+                    "malamar": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "binacle": {
+                        "evolution": "barbaracle",
+                        "method": "Reach level 39"
+                    },
+                    "barbaracle": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "skrelp": {
+                        "evolution": "dragalge",
+                        "method": "Reach level 48"
+                    },
+                    "dragalge": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "clauncher": {
+                        "evolution": "clawitzer",
+                        "method": "Reach level 37"
+                    },
+                    "clawitzer": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "helioptile": {
+                        "evolution": "heliolisk",
+                        "method": "Use a Sun Stone"
+                    },
+                    "heliolisk": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "tyrunt": {
+                        "evolution": "tyrantrum",
+                        "method": "Reach level 39 during the day"
+                    },
+                    "tyrantrum": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "amaura": {
+                        "evolution": "aurorus",
+                        "method": "Reach level 39 at night"
+                    },
+                    "aurorus": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "sylveon": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "hawlucha": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "dedenne": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "carbink": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "goomy": {
+                        "evolution": "sliggoo",
+                        "method": "Reach level 40"
+                    },
+                    "sliggoo": {
+                        "evolution": "goodra",
+                        "method": "Reach level 50 during rain"
+                    },
+                    "goodra": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "klefki": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "phantump": {
+                        "evolution": "trevenant",
+                        "method": "Use a Link Cable"
+                    },
+                    "trevenant": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "pumpkaboo": {
+                        "evolution": "gourgeist",
+                        "method": "Use a Link Cable"
+                    },
+                    "gourgeist": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "bergmite": {
+                        "evolution": "avalugg",
+                        "method": "Reach level 37"
+                    },
+                    "avalugg": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "noibat": {
+                        "evolution": "noivern",
+                        "method": "Reach level 48"
+                    },
+                    "noivern": {
+                        "evolution": null,
+                        "method": "Does not evolve"
+                    },
+                    "xerneas": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns in oak forest(with the tree of life), dark forest and fower fields )"
+                    },
+                    "yveltal": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns in spooky biome, deep dark, dark forest)"
+                    },
+                    "zygarde": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns underground, 10%, 50%, or Complete Form)"
+                    },
+                    "diancie": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns in deep dark)"
+                    },
+                    "hoopa": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns in the end, Confined or Unbound Form)"
+                    },
+                    "volcanion": {
+                        "evolution": null,
+                        "method": "Does not evolve (spawns in the nether or mountains)"
+                    },
+                    
+                        "rowlet": {
+                            "evolution": "dartrix",
+                            "method": "Reach level 17"
+                        },
+                        "dartrix": {
+                            "evolution": "decidueye",
+                            "method": "Reach level 34"
+                        },
+                        "decidueye": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "litten": {
+                            "evolution": "torracat",
+                            "method": "Reach level 17"
+                        },
+                        "torracat": {
+                            "evolution": "incineroar",
+                            "method": "Reach level 34"
+                        },
+                        "incineroar": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "popplio": {
+                            "evolution": "brionne",
+                            "method": "Reach level 17"
+                        },
+                        "brionne": {
+                            "evolution": "primarina",
+                            "method": "Reach level 34"
+                        },
+                        "primarina": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "pikipek": {
+                            "evolution": "trumbeak",
+                            "method": "Reach level 14"
+                        },
+                        "trumbeak": {
+                            "evolution": "toucannon",
+                            "method": "Reach level 28"
+                        },
+                        "toucannon": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "yungoos": {
+                            "evolution": "gumshoos",
+                            "method": "Reach level 20 during the day"
+                        },
+                        "gumshoos": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "grubbin": {
+                            "evolution": "charjabug",
+                            "method": "Reach level 20"
+                        },
+                        "charjabug": {
+                            "evolution": "vikavolt",
+                            "method": "Use a Thunder Stone"
+                        },
+                        "vikavolt": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "crabrawler": {
+                            "evolution": "crabominable",
+                            "method": "Level up in a snowy biome"
+                        },
+                        "crabominable": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "oricorio": {
+                            "evolution": null,
+                            "method": "Does not evolve (changes forms: Baile, Pom-Pom, Pa'u, Sensu)"
+                        },
+                        "cutiefly": {
+                            "evolution": "ribombee",
+                            "method": "Reach level 25"
+                        },
+                        "ribombee": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "rockruff": {
+                            "evolutions": [
+                                { "name": "lycanroc-midday", "method": "Reach level 25 during the day" },
+                                { "name": "lycanroc-midnight", "method": "Reach level 25 at night" },
+                                { "name": "lycanroc-dusk", "method": "Reach level 25 with Own Tempo between 5-6 PM" }
+                            ]
+                        },
+                        "lycanroc-midday": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "lycanroc-midnight": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "lycanroc-dusk": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "wishiwashi": {
+                            "evolution": null,
+                            "method": "Does not evolve (changes forms: Solo, School)"
+                        },
+                        "mareanie": {
+                            "evolution": "toxapex",
+                            "method": "Reach level 38"
+                        },
+                        "toxapex": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "mudbray": {
+                            "evolution": "mudsdale",
+                            "method": "Reach level 30"
+                        },
+                        "mudsdale": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "dewpider": {
+                            "evolution": "araquanid",
+                            "method": "Reach level 22"
+                        },
+                        "araquanid": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "fomantis": {
+                            "evolution": "lurantis",
+                            "method": "Reach level 34 during the day"
+                        },
+                        "lurantis": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "morelull": {
+                            "evolution": "shiinotic",
+                            "method": "Reach level 24"
+                        },
+                        "shiinotic": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "salandit": {
+                            "evolution": "salazzle",
+                            "method": "Reach level 33 (female only)"
+                        },
+                        "salazzle": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "stufful": {
+                            "evolution": "bewear",
+                            "method": "Reach level 27"
+                        },
+                        "bewear": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "bounsweet": {
+                            "evolution": "steenee",
+                            "method": "Reach level 18"
+                        },
+                        "steenee": {
+                            "evolution": "tsareena",
+                            "method": "Level up knowing Stomp"
+                        },
+                        "tsareena": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "comfey": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "oranguru": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "passimian": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "wimpod": {
+                            "evolution": "golisopod",
+                            "method": "Reach level 30"
+                        },
+                        "golisopod": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "sandygast": {
+                            "evolution": "palossand",
+                            "method": "Reach level 42"
+                        },
+                        "palossand": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "pyukumuku": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "type-null": {
+                            "evolution": "silvally",
+                            "method": "High friendship"
+                        },
+                        "silvally": {
+                            "evolution": null,
+                            "method": "Does not evolve (changes types with Memory Discs)"
+                        },
+                        "minior": {
+                            "evolution": null,
+                            "method": "Does not evolve (changes forms: Meteor, Core)"
+                        },
+                        "komala": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "turtonator": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "togedemaru": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "mimikyu": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "bruxish": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "drampa": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "dhelmise": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "jangmo-o": {
+                            "evolution": "hakamo-o",
+                            "method": "Reach level 35"
+                        },
+                        "hakamo-o": {
+                            "evolution": "kommo-o",
+                            "method": "Reach level 45"
+                        },
+                        "kommo-o": {
+                            "evolution": null,
+                            "method": "Does not evolve"
+                        },
+                        "tapu-koko": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in jungle, forest)"
+                        },
+                        "tapu-lele": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in jungle, forest)"
+                        },
+                        "tapu-bulu": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in jungle, forest)"
+                        },
+                        "tapu-fini": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in jungle, forest)"
+                        },
+                        "cosmog": {
+                            "evolution": "cosmoem",
+                            "method": "Reach level 43 (spawn in floral biome"
+                        },
+                        "cosmoem": {
+                            "evolutions": [
+                                { "name": "solgaleo", "method": "Reach level 53 during the day " },
+                                { "name": "lunala", "method": "Reach level 53 at night" }
+                            ]
+                        },
+                        "solgaleo": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawn in badlands or savanna)"
+                        },
+                        "lunala": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in the end or dark forest at night)"
+                        },
+                        "necrozma": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in the end tower, in the end or dark forest, Normal, Dusk Mane, Dawn Wings, or Ultra Form)"
+                        },
+                        "magearna": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in forest)"
+                        },
+                        "marshadow": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in deep dark)"
+                        },
+                        "zeraora": {
+                            "evolution": null,
+                            "method": "Does not evolve (spawns in desert)"
+                        },
+                        
+                            "grookey": {
+                                "evolution": "thwackey",
+                                "method": "Reach level 16"
+                            },
+                            "thwackey": {
+                                "evolution": "rillaboom",
+                                "method": "Reach level 35"
+                            },
+                            "rillaboom": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "scorbunny": {
+                                "evolution": "raboot",
+                                "method": "Reach level 16"
+                            },
+                            "raboot": {
+                                "evolution": "cinderace",
+                                "method": "Reach level 35"
+                            },
+                            "cinderace": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "sobble": {
+                                "evolution": "drizzile",
+                                "method": "Reach level 16"
+                            },
+                            "drizzile": {
+                                "evolution": "inteleon",
+                                "method": "Reach level 35"
+                            },
+                            "inteleon": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "skwovet": {
+                                "evolution": "greedent",
+                                "method": "Reach level 24"
+                            },
+                            "greedent": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "rookidee": {
+                                "evolution": "corvisquire",
+                                "method": "Reach level 18"
+                            },
+                            "corvisquire": {
+                                "evolution": "corviknight",
+                                "method": "Reach level 38"
+                            },
+                            "corviknight": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "blipbug": {
+                                "evolution": "dottler",
+                                "method": "Reach level 10"
+                            },
+                            "dottler": {
+                                "evolution": "orbeetle",
+                                "method": "Reach level 30"
+                            },
+                            "orbeetle": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "nickit": {
+                                "evolution": "thievul",
+                                "method": "Reach level 18"
+                            },
+                            "thievul": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "gossifleur": {
+                                "evolution": "eldegoss",
+                                "method": "Reach level 20"
+                            },
+                            "eldegoss": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "wooloo": {
+                                "evolution": "dubwool",
+                                "method": "Reach level 24"
+                            },
+                            "dubwool": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "chewtle": {
+                                "evolution": "drednaw",
+                                "method": "Reach level 22"
+                            },
+                            "drednaw": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "yamper": {
+                                "evolution": "boltund",
+                                "method": "Reach level 25"
+                            },
+                            "boltund": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "rolycoly": {
+                                "evolution": "carkol",
+                                "method": "Reach level 18"
+                            },
+                            "carkol": {
+                                "evolution": "coalossal",
+                                "method": "Reach level 34"
+                            },
+                            "coalossal": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "applin": {
+                                "evolutions": [
+                                    { "name": "appletun", "method": "Use a Sweet Apple" },
+                                    { "name": "flapple", "method": "Use a Tart Apple" }
+                                ]
+                            },
+                            "appletun": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "flapple": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "silicobra": {
+                                "evolution": "sandaconda",
+                                "method": "Reach level 36"
+                            },
+                            "sandaconda": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "cramorant": {
+                                "evolution": null,
+                                "method": "Does not evolve (changes forms: Gulping, Gorging)"
+                            },
+                            "arrokuda": {
+                                "evolution": "barraskewda",
+                                "method": "Reach level 26"
+                            },
+                            "barraskewda": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "toxel": {
+                                "evolutions": [
+                                    { "name": "toxtricity-amped", "method": "Reach level 30 with Adamant, Brave, or similar nature" },
+                                    { "name": "toxtricity-low-key", "method": "Reach level 30 with Calm, Careful, or similar nature" }
+                                ]
+                            },
+                            "toxtricity-amped": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "toxtricity-low-key": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "sizzlipede": {
+                                "evolution": "centiskorch",
+                                "method": "Reach level 28"
+                            },
+                            "centiskorch": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "clobbopus": {
+                                "evolution": "grapploct",
+                                "method": "Level up knowing Taunt"
+                            },
+                            "grapploct": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "sinistea": {
+                                "evolution": "polteageist",
+                                "method": "Use a Cracked Pot (Phony) or Chipped Pot (Authentic)"
+                            },
+                            "polteageist": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "hatenna": {
+                                "evolution": "hattrem",
+                                "method": "Reach level 32"
+                            },
+                            "hattrem": {
+                                "evolution": "hatterene",
+                                "method": "Reach level 42"
+                            },
+                            "hatterene": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "impidimp": {
+                                "evolution": "morgrem",
+                                "method": "Reach level 32"
+                            },
+                            "morgrem": {
+                                "evolution": "grimmsnarl",
+                                "method": "Reach level 42"
+                            },
+                            "grimmsnarl": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "obstagoon": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "perrserker": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "cursola": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "sirfetchd": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "mr-rime": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "runerigus": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "milcery": {
+                                "evolution": "alcremie",
+                                "method": "Spin while holding a Sweet (varies by time, direction, and Sweet)"
+                            },
+                            "alcremie": {
+                                "evolution": null,
+                                "method": "Does not evolve (multiple forms)"
+                            },
+                            "falinks": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "pincurchin": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "snom": {
+                                "evolution": "frosmoth",
+                                "method": "High friendship at night"
+                            },
+                            "frosmoth": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "stonjourner": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "eiscue": {
+                                "evolution": null,
+                                "method": "Does not evolve (changes forms: Ice Face, Noice Face)"
+                            },
+                            "indeedee": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "morpeko": {
+                                "evolution": null,
+                                "method": "Does not evolve (changes forms: Full Belly, Hangry)"
+                            },
+                            "cufant": {
+                                "evolution": "copperajah",
+                                "method": "Reach level 34"
+                            },
+                            "copperajah": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "dracozolt": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "arctozolt": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "dracovish": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "arctovish": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "duraludon": {
+                                "evolution": "archaludon",
+                                "method": "Use a Metal Alloy"
+                            },
+                            "archaludon": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "dreepy": {
+                                "evolution": "drakloak",
+                                "method": "Reach level 50"
+                            },
+                            "drakloak": {
+                                "evolution": "dragapult",
+                                "method": "Reach level 60"
+                            },
+                            "dragapult": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "zacian": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in forest, Hero of Many Battles or Crowned Sword)"
+                            },
+                            "zamazenta": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in forest, Hero of Many Battles or Crowned Shield)"
+                            },
+                            "eternatus": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in the end)"
+                            },
+                            "kubfu": {
+                                "evolutions": [
+                                    { "name": "urshifu-single-strike", "method": "Train in the Tower of Darkness" },
+                                    { "name": "urshifu-rapid-strike", "method": "Train in the Tower of Waters" }
+                                ]
+                            },
+                            "urshifu-single-strike": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "urshifu-rapid-strike": {
+                                "evolution": null,
+                                "method": "Does not evolve"
+                            },
+                            "regieleki": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in the regieleki-cave or in a custom structure in the desert with regidrago)"
+                            },
+                            "regidrago": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in custom structures in the desert with regieleki or in the regidrago-cave)"
+                            },
+                            "glastrier": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in ice biome)"
+                            },
+                            "spectrier": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in deep dark and dark forest)"
+                            },
+                            "calyrex": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in custom structures on mushroom island, Normal, Ice Rider, or Shadow Rider)"
+                            },
+                            "enamorus": {
+                                "evolution": null,
+                                "method": "Does not evolve (spawns in savanna, Incarnate or Therian Form)"
+                            },
+                            
+                                "sprigatito": {
+                                    "evolution": "floragato",
+                                    "method": "Reach level 16"
+                                },
+                                "floragato": {
+                                    "evolution": "meowscarada",
+                                    "method": "Reach level 36"
+                                },
+                                "meowscarada": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "fuecoco": {
+                                    "evolution": "crocalor",
+                                    "method": "Reach level 16"
+                                },
+                                "crocalor": {
+                                    "evolution": "skeledirge",
+                                    "method": "Reach level 36"
+                                },
+                                "skeledirge": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "quaxly": {
+                                    "evolution": "quaxwell",
+                                    "method": "Reach level 16"
+                                },
+                                "quaxwell": {
+                                    "evolution": "quaquaval",
+                                    "method": "Reach level 36"
+                                },
+                                "quaquaval": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "lechonk": {
+                                    "evolution": "oinkologne",
+                                    "method": "Reach level 18"
+                                },
+                                "oinkologne": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "tarountula": {
+                                    "evolution": "spidops",
+                                    "method": "Reach level 15"
+                                },
+                                "spidops": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "nymble": {
+                                    "evolution": "lokix",
+                                    "method": "Reach level 24"
+                                },
+                                "lokix": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "pawmi": {
+                                    "evolution": "pawmo",
+                                    "method": "Reach level 18"
+                                },
+                                "pawmo": {
+                                    "evolution": "pawmot",
+                                    "method": "Level up after walking 1000 steps"
+                                },
+                                "pawmot": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "tandemaus": {
+                                    "evolution": "maushold",
+                                    "method": "Reach level 25"
+                                },
+                                "maushold": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (Family of Three or Four)"
+                                },
+                                "fidough": {
+                                    "evolution": "dachsbun",
+                                    "method": "Reach level 26"
+                                },
+                                "dachsbun": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "smoliv": {
+                                    "evolution": "dolliv",
+                                    "method": "Reach level 25"
+                                },
+                                "dolliv": {
+                                    "evolution": "arboliva",
+                                    "method": "Reach level 35"
+                                },
+                                "arboliva": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "squawkabilly": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (Green, Blue, Yellow, or White Plumage)"
+                                },
+                                "nacli": {
+                                    "evolution": "naclstack",
+                                    "method": "Reach level 24"
+                                },
+                                "naclstack": {
+                                    "evolution": "garganacl",
+                                    "method": "Reach level 38"
+                                },
+                                "garganacl": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "charcadet": {
+                                    "evolutions": [
+                                        { "name": "armarouge", "method": "Use an Auspicious Armor" },
+                                        { "name": "ceruledge", "method": "Use a Malicious Armor" }
+                                    ]
+                                },
+                                "armarouge": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "ceruledge": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "tadbulb": {
+                                    "evolution": "bellibolt",
+                                    "method": "Use a Thunder Stone"
+                                },
+                                "bellibolt": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "wattrel": {
+                                    "evolution": "kilowattrel",
+                                    "method": "Reach level 25"
+                                },
+                                "kilowattrel": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "maschiff": {
+                                    "evolution": "mabosstiff",
+                                    "method": "Reach level 30"
+                                },
+                                "mabosstiff": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "shroodle": {
+                                    "evolution": "grafaiai",
+                                    "method": "Reach level 28"
+                                },
+                                "grafaiai": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "bramblin": {
+                                    "evolution": "brambleghast",
+                                    "method": "Level up after walking 1000 steps"
+                                },
+                                "brambleghast": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "toedscool": {
+                                    "evolution": "toedscruel",
+                                    "method": "Reach level 30"
+                                },
+                                "toedscruel": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "klawf": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "capsakid": {
+                                    "evolution": "scovillain",
+                                    "method": "Use a Fire Stone"
+                                },
+                                "scovillain": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "rellor": {
+                                    "evolution": "rabsca",
+                                    "method": "Level up after walking 1000 steps"
+                                },
+                                "rabsca": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "flittle": {
+                                    "evolution": "espathra",
+                                    "method": "Reach level 35"
+                                },
+                                "espathra": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "tinkatink": {
+                                    "evolution": "tinkatuff",
+                                    "method": "Reach level 24"
+                                },
+                                "tinkatuff": {
+                                    "evolution": "tinkaton",
+                                    "method": "Reach level 38"
+                                },
+                                "tinkaton": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "wiglett": {
+                                    "evolution": "wugtrio",
+                                    "method": "Reach level 26"
+                                },
+                                "wugtrio": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "bombirdier": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "finizen": {
+                                    "evolution": "palafin",
+                                    "method": "Reach level 38 in multiplayer"
+                                },
+                                "palafin": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (Zero or Hero Form)"
+                                },
+                                "varoom": {
+                                    "evolution": "revavroom",
+                                    "method": "Reach level 40"
+                                },
+                                "revavroom": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "cyclizar": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "orthworm": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "glimmet": {
+                                    "evolution": "glimmora",
+                                    "method": "Reach level 35"
+                                },
+                                "glimmora": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "greavard": {
+                                    "evolution": "houndstone",
+                                    "method": "Reach level 30 at night"
+                                },
+                                "houndstone": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "flamigo": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "cetoddle": {
+                                    "evolution": "cetitan",
+                                    "method": "Use an Ice Stone"
+                                },
+                                "cetitan": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "veluza": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "dondozo": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "tatsugiri": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (Curly, Droopy, or Stretchy Form)"
+                                },
+                                "annihilape": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "clodsire": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "farigiraf": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "dudunsparce": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (Two-Segment or Three-Segment Form)"
+                                },
+                               
+                                "great-tusk": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "scream-tail": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "brute-bonnet": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "flutter-mane": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "slither-wing": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "sandy-shocks": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-treads": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-bundle": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-hands": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-jugulis": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-moth": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "iron-thorns": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "frigibax": {
+                                    "evolution": "arctibax",
+                                    "method": "Reach level 35"
+                                },
+                                "arctibax": {
+                                    "evolution": "baxcalibur",
+                                    "method": "Reach level 54"
+                                },
+                                "baxcalibur": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "gimmighoul": {
+                                    "evolution": "gholdengo",
+                                    "method": "Collect 999 Gimmighoul Coins"
+                                },
+                                "gholdengo": {
+                                    "evolution": null,
+                                    "method": "Does not evolve"
+                                },
+                                "wo-chien": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (idk the spawn)"
+                                },
+                                "chien-pao": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (ice biome at night)"
+                                },
+                                "ting-lu": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (idk the spawn)"
+                                },
+                                "chi-yu": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (idk the spawn)"
+                                },
+                                "roaring-moon": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in lush cave)"
+                                },
+                                "iron-valiant": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "koraidon": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "miraidon": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "walking-wake": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in savanna)"
+                                },
+                                "iron-leaves": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "ogerpon": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures, Teal Mask, Wellspring, Hearthflame, or Cornerstone)"
+                                },
+                                "okidogi": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "munkidori": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "fezandipiti": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                },
+                                "terapagos": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures, Normal, Terastal, or Stellar Form)"
+                                },
+                                "pecharunt": {
+                                    "evolution": null,
+                                    "method": "Does not evolve (spawns in custom structures)"
+                                }
+                            }
+                        

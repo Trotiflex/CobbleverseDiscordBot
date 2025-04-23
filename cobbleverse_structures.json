@@ -1,0 +1,245 @@
+{
+    "structures": {
+      "villages_and_associated": [
+        {
+          "name": "Custom Village",
+          "biomes": ["Plains", "Savanna", "Taiga"],
+          "description": "Contains houses, a Pokémon Center, a shop, and loot chests (e.g., XP Candies)."
+        },
+        {
+          "name": "Mall",
+          "biomes": ["Plains", "Savanna", "Taiga"],
+          "description": "Found in some custom villages, allows buying Pokémon-related items."
+        },
+        {
+          "name": "Gimmighoul Tower",
+          "biomes": ["Various biomes"],
+          "description": "Contains a Gimmighoul or a chest. Defeating Gimmighoul provides coins for the mall."
+        }
+      ],
+      "gyms": [
+        {
+          "name": "Brock's Gym",
+          "biomes": ["Plains", "Mountains"],
+          "description": "Gym for Rock-type Pokémon."
+        },
+        {
+          "name": "Misty's Gym",
+          "biomes": ["Aquatic", "Beach"],
+          "description": "Gym for Water-type Pokémon."
+        },
+        {
+          "name": "Lt. Surge's Gym",
+          "biomes": ["Plains", "Savanna"],
+          "description": "Gym for Electric-type Pokémon."
+        },
+        {
+          "name": "Erika's Gym",
+          "biomes": ["Forest", "Flower Forest"],
+          "description": "Gym for Grass-type Pokémon."
+        },
+        {
+          "name": "Sabrina's Gym",
+          "biomes": ["Plains", "Dark Forest"],
+          "description": "Gym for Psychic-type Pokémon."
+        },
+        {
+          "name": "Koga's Gym",
+          "biomes": ["Swamp", "Jungle"],
+          "description": "Gym for Poison-type Pokémon."
+        },
+        {
+          "name": "Blaine's Gym",
+          "biomes": ["Badlands", "Volcanic"],
+          "description": "Gym for Fire-type Pokémon."
+        },
+        {
+          "name": "Giovanni's Gym",
+          "biomes": ["Plains", "Mountains"],
+          "description": "Gym for Ground-type Pokémon."
+        },
+        {
+          "name": "Sandra's Gym",
+          "biomes": ["Plains", "Savanna"],
+          "description": "Additional Kanto gym."
+        },
+        {
+          "name": "Johto Gyms",
+          "biomes": ["Various biomes"],
+          "description": "Spawn in new chunks after defeating Kanto Champion. Biomes not specified."
+        },
+        {
+          "name": "Elite Four Tower",
+          "biomes": ["End"],
+          "description": "Contains Elite Four and Champion battles."
+        }
+      ],
+      "legendary_structures": [
+
+ 
+        {
+          "name": "Tree of Life",
+          "biomes": ["Oak Forest", "Dark Forest", "Flower Forest"],
+          "description": "Spawns Xerneas at level 50."
+        },
+        {
+          "name": "Iron Cave",
+          "biomes": ["Mountains"],
+          "description": "Spawns Registeel."
+        },
+        {
+        "name": "Snowpoint temple",
+          "biomes": ["ice"],
+          "description": "Spawns Regigigas."
+        },
+        {
+          "name": "Sand Cave",
+          "biomes": ["desert"],
+          "description": "Spawns Regieleki."
+        },
+        {
+        "name": "Sword mountain",
+          "biomes": ["Mountains"],
+          "description": "Spawns Keldeo."
+        },
+        {
+            "name": "mushroom",
+              "biomes": ["Mushroom island"],
+              "description": "Spawns Calyrex."
+            },
+
+            {
+                "name": "regi temple",
+                  "biomes": ["desert"],
+                  "description": "Spawns regieleki et regidrago."
+                },
+                {
+                    "name": "ilex shrine",
+                      "biomes": ["Forest"],
+                      "description": "Spawns Celebi."
+                    },
+                    {
+                        "name": "birth island",
+                          "biomes": ["ocean island"],
+                          "description": "Spawns deoxys."
+                        },
+                        {
+                            "name": "dyna-tree",
+                              "biomes": ["plains"],
+                              "description": "Spawns the bird trio of galarian birds."
+                            }
+        
+      ],
+      "fossil_dig_sites": [
+        {
+          "name": "Prehistoric Birch Trees",
+          "biomes": ["Forest", "Plains"],
+          "description": "Fallen birch trees with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Oak Trees",
+          "biomes": ["Forest", "Plains"],
+          "description": "Fallen oak trees with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Spruce Trees",
+          "biomes": ["Taiga", "Snowy Mountains"],
+          "description": "Fallen spruce trees with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Powdered Deposits",
+          "biomes": ["Snowy Tundra", "Snowy Mountains"],
+          "description": "Snow outcrops with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Sandy Dens",
+          "biomes": ["Desert"],
+          "description": "Sandstone outcrops with Suspicious Sand."
+        },
+        {
+          "name": "Prehistoric Eroded Pillar",
+          "biomes": ["Badlands"],
+          "description": "Pillars with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Preserved Skeletons",
+          "biomes": ["Frozen Ocean"],
+          "description": "Ice boulders with Bone Blocks and Suspicious Gravel/Sand."
+        },
+        {
+          "name": "Prehistoric Rooted Pits",
+          "biomes": ["Swamp"],
+          "description": "Mangrove roots with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Lush Dens",
+          "biomes": ["Jungle"],
+          "description": "Jungle leaf outcrops with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Mossy Ponds",
+          "biomes": ["Lush Caves"],
+          "description": "Contains Deepslate Water Stone Ore and Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Enhydro Agates",
+          "biomes": ["Lush Caves"],
+          "description": "Contains Deepslate Water Stone Ore and Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Dripstone Oases",
+          "biomes": ["Dripstone Caves"],
+          "description": "Underground structures with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Frozen Pond",
+          "biomes": ["Snowy Tundra", "Snowy Mountains"],
+          "description": "Frozen ponds with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Frozen Spike",
+          "biomes": ["Snowy Tundra", "Snowy Mountains"],
+          "description": "Frozen spikes with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Hydrothermal Vents",
+          "biomes": ["Ocean Floor"],
+          "description": "Basalt pillars with Suspicious Gravel."
+        },
+        {
+          "name": "Prehistoric Submerged Impacts",
+          "biomes": ["Ocean Floor"],
+          "description": "Gravel and stone outcrops with Suspicious Gravel."
+        }
+      ],
+      "other_cobblemon_structures": [
+        {
+          "name": "Ruins",
+          "biomes": ["Various biomes"],
+          "description": "Related to Gimmighoul and ancient items."
+        },
+        {
+          "name": "Mini Dungeons",
+          "biomes": ["Various biomes"],
+          "description": "Contain Trial Spawners."
+        },
+        {
+          "name": "Village Structures",
+          "biomes": ["Plains", "Savanna", "Taiga"],
+          "description": "Structures within Pokémon villages."
+        }
+      ]
+    },
+    "notes": [
+      "Biomes are based on available data and assumptions where unspecified.",
+      "Custom Structures for legendaries (e.g., Calyrex, Deoxys) lack specific biome details.",
+      "Johto Gyms spawn in new chunks after defeating Kanto Champion, biomes not specified.",
+      "Use '/locate structure bca:custom_village' to find custom villages.",
+      "Some structures may require mods like Terralith for additional biomes."
+    ],
+    "sources": [
+      "CobbleVerse Wiki (cobbleverse.fandom.com)",
+      "Cobblemon Wiki (wiki.cobblemon.com)",
+      "Modrinth (modrinth.com)"
+    ]
+  }

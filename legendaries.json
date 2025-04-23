@@ -1,0 +1,569 @@
+[
+    {
+        "name": "Articuno",
+        "evolution": null,
+        "spawn": "Spawns in ice biomes",
+        "type": "Ice"
+    },
+    {
+        "name": "Zapdos",
+        "evolution": null,
+        "spawn": "Spawns in plains or mountains",
+        "type": "Electric"
+    },
+    {
+        "name": "Moltres",
+        "evolution": null,
+        "spawn": "Spawns in volcanic biomes",
+        "type": "Fire"
+    },
+    {
+        "name": "Mewtwo",
+        "evolution": null,
+        "spawn": "Spawns in the overworld",
+        "type": "Psychic"
+    },
+    {
+        "name": "Mew",
+        "evolution": null,
+        "spawn": "Spawns in the overworld",
+        "type": "Psychic"
+    },
+    {
+        "name": "Raikou",
+        "evolution": null,
+        "spawn": "Spawns in plains or savanna",
+        "type": "Electric"
+    },
+    {
+        "name": "Entei",
+        "evolution": null,
+        "spawn": "Spawns in volcanic biomes",
+        "type": "Fire"
+    },
+    {
+        "name": "Suicune",
+        "evolution": null,
+        "spawn": "Spawns in aquatic biomes",
+        "type": "Water"
+    },
+    {
+        "name": "Lugia",
+        "evolution": null,
+        "spawn": "Spawns in deep ocean when raining",
+        "type": "Water"
+    },
+    {
+        "name": "Ho-Oh",
+        "evolution": null,
+        "spawn": "Spawns in bell tower with the rainbow feather",
+        "type": "Fire"
+    },
+    {
+        "name": "Celebi",
+        "evolution": null,
+        "spawn": "Spawns in forests or ilex shrine with the gs ball",
+        "type": "Grass"
+    },
+    {
+        "name": "Regirock",
+        "evolution": null,
+        "spawn": "Spawns in biome mesa in a regirock-cave",
+        "type": "Rock"
+    },
+    {
+        "name": "Regice",
+        "evolution": null,
+        "spawn": "Spawns in ice biome in a regice-cave",
+        "type": "Ice"
+    },
+    {
+        "name": "Registeel",
+        "evolution": null,
+        "spawn": "Spawns in mountain biome in a registeel-cave",
+        "type": "Steel"
+    },
+    {
+        "name": "Latias",
+        "evolution": null,
+        "spawn": "Spawns in plains biome",
+        "type": "Dragon"
+    },
+    {
+        "name": "Latios",
+        "evolution": null,
+        "spawn": "Spawns in plains biome",
+        "type": "Dragon"
+    },
+    {
+        "name": "Kyogre",
+        "evolution": null,
+        "spawn": "Spawns in ocean biome while it's raining",
+        "type": "Water"
+    },
+    {
+        "name": "Groudon",
+        "evolution": null,
+        "spawn": "Spawns in red sand biome",
+        "type": "Ground"
+    },
+    {
+        "name": "Rayquaza",
+        "evolution": null,
+        "spawn": "Spawns in mountain biome and in the End, shiny, level 100",
+        "type": "Dragon"
+    },
+    {
+        "name": "Jirachi",
+        "evolution": null,
+        "spawn": "Spawns in the end, mountain or hills in the night",
+        "type": "Steel"
+    },
+    {
+        "name": "Deoxys",
+        "evolution": null,
+        "spawn": "Spawns in the birth island",
+        "type": "Psychic"
+    },
+    {
+        "name": "Uxie",
+        "evolution": null,
+        "spawn": "Spawns in river",
+        "type": "Psychic"
+    },
+    {
+        "name": "Mesprit",
+        "evolution": null,
+        "spawn": "Spawns in river",
+        "type": "Psychic"
+    },
+    {
+        "name": "Azelf",
+        "evolution": null,
+        "spawn": "Spawns in custom river",
+        "type": "Psychic"
+    },
+    {
+        "name": "Dialga",
+        "evolution": null,
+        "spawn": "Spawns in peak biome",
+        "type": "Dragon"
+    },
+    {
+        "name": "Palkia",
+        "evolution": null,
+        "spawn": "Spawns in beach and lukewarm ocean biome with a clear sky",
+        "type": "Water"
+    },
+    {
+        "name": "Heatran",
+        "evolution": null,
+        "spawn": "Spawns in the nether",
+        "type": "Fire"
+    },
+    {
+        "name": "Regigigas",
+        "evolution": null,
+        "spawn": "Spawns in stony peaks and the snowpoint temple",
+        "type": "Normal"
+    },
+    {
+        "name": "Giratina",
+        "evolution": null,
+        "spawn": "Spawns in the end and the nether (on the roof)",
+        "type": "Ghost"
+    },
+    {
+        "name": "Cresselia",
+        "evolution": null,
+        "spawn": "Spawns in floral biome with natural flower",
+        "type": "Psychic"
+    },
+    {
+        "name": "Phione",
+        "evolution": null,
+        "spawn": "Spawns in aquatic biomes",
+        "type": "Water"
+    },
+    {
+        "name": "Manaphy",
+        "evolution": null,
+        "spawn": "Spawns in aquatic biomes",
+        "type": "Water"
+    },
+    {
+        "name": "Darkrai",
+        "evolution": null,
+        "spawn": "Spawns in the deep dark biome and spooky",
+        "type": "Dark"
+    },
+    {
+        "name": "Shaymin",
+        "evolution": null,
+        "spawn": "Spawns in forests and meadow, Land or Sky Form",
+        "type": "Grass"
+    },
+    {
+        "name": "Arceus",
+        "evolution": null,
+        "spawn": "Spawns in the end",
+        "type": "Normal"
+    },
+    {
+        "name": "Victini",
+        "evolution": null,
+        "spawn": "Spawns in savanna biome",
+        "type": "Psychic"
+    },
+    {
+        "name": "Cobalion",
+        "evolution": null,
+        "spawn": "Spawns in plains",
+        "type": "Steel"
+    },
+    {
+        "name": "Terrakion",
+        "evolution": null,
+        "spawn": "Spawns in stony peaks",
+        "type": "Rock"
+    },
+    {
+        "name": "Virizion",
+        "evolution": null,
+        "spawn": "Spawns in forest",
+        "type": "Grass"
+    },
+    {
+        "name": "Tornadus",
+        "evolution": null,
+        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "type": "Flying"
+    },
+    {
+        "name": "Thundurus",
+        "evolution": null,
+        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "type": "Electric"
+    },
+    {
+        "name": "Reshiram",
+        "evolution": null,
+        "spawn": "Spawns in mountains with clear sky",
+        "type": "Dragon"
+    },
+    {
+        "name": "Zekrom",
+        "evolution": null,
+        "spawn": "Spawns in mountains",
+        "type": "Dragon"
+    },
+    {
+        "name": "Landorus",
+        "evolution": null,
+        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "type": "Ground"
+    },
+    {
+        "name": "Kyurem",
+        "evolution": null,
+        "spawn": "Spawns in ice biome, Normal, Black, or White Form",
+        "type": "Dragon"
+    },
+    {
+        "name": "Keldeo",
+        "evolution": null,
+        "spawn": "Spawns in river or mountain or sword mountain",
+        "type": "Water"
+    },
+    {
+        "name": "Meloetta",
+        "evolution": null,
+        "spawn": "Spawns in meadow or sunflower plains, Aria or Pirouette Form",
+        "type": "Normal"
+    },
+    {
+        "name": "Genesect",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Bug"
+    },
+    {
+        "name": "Xerneas",
+        "evolution": null,
+        "spawn": "Spawns in oak forest (with the tree of life), dark forest and flower fields",
+        "type": "Fairy"
+    },
+    {
+        "name": "Yveltal",
+        "evolution": null,
+        "spawn": "Spawns in spooky biome, deep dark, dark forest",
+        "type": "Dark"
+    },
+    {
+        "name": "Zygarde",
+        "evolution": null,
+        "spawn": "Spawns underground, 10%, 50%, or Complete Form",
+        "type": "Dragon"
+    },
+    {
+        "name": "Diancie",
+        "evolution": null,
+        "spawn": "Spawns in deep dark",
+        "type": "Fairy"
+    },
+    {
+        "name": "Hoopa",
+        "evolution": null,
+        "spawn": "Spawns in the end, Confined or Unbound Form",
+        "type": "Psychic"
+    },
+    {
+        "name": "Volcanion",
+        "evolution": null,
+        "spawn": "Spawns in the nether or mountains",
+        "type": "Fire"
+    },
+    {
+        "name": "Tapu Koko",
+        "evolution": null,
+        "spawn": "Spawns in jungle, forest",
+        "type": "Electric"
+    },
+    {
+        "name": "Tapu Lele",
+        "evolution": null,
+        "spawn": "Spawns in jungle, forest",
+        "type": "Fairy"
+    },
+    {
+        "name": "Tapu Bulu",
+        "evolution": null,
+        "spawn": "Spawns in jungle, forest",
+        "type": "Grass"
+    },
+    {
+        "name": "Tapu Fini",
+        "evolution": null,
+        "spawn": "Spawns in jungle, forest",
+        "type": "Water"
+    },
+    {
+        "name": "Cosmog",
+        "evolution": "Cosmoem",
+        "spawn": "Spawns in floral biome",
+        "type": "Psychic"
+    },
+    {
+        "name": "Cosmoem",
+        "evolutions": [
+            { "name": "Solgaleo", "method": "Reach level 53 during the day" },
+            { "name": "Lunala", "method": "Reach level 53 at night" }
+        ],
+        "spawn": "Does not spawn naturally",
+        "type": "Psychic"
+    },
+    {
+        "name": "Solgaleo",
+        "evolution": null,
+        "spawn": "Spawns in badlands or savanna",
+        "type": "Steel"
+    },
+    {
+        "name": "Lunala",
+        "evolution": null,
+        "spawn": "Spawns in the end or dark forest at night",
+        "type": "Ghost"
+    },
+    {
+        "name": "Necrozma",
+        "evolution": null,
+        "spawn": "Spawns in the end tower, in the end or dark forest, Normal, Dusk Mane, Dawn Wings, or Ultra Form",
+        "type": "Psychic"
+    },
+    {
+        "name": "Magearna",
+        "evolution": null,
+        "spawn": "Spawns in forest",
+        "type": "Steel"
+    },
+    {
+        "name": "Marshadow",
+        "evolution": null,
+        "spawn": "Spawns in deep dark",
+        "type": "Fighting"
+    },
+    {
+        "name": "Zeraora",
+        "evolution": null,
+        "spawn": "Spawns in desert",
+        "type": "Electric"
+    },
+    {
+        "name": "Zacian",
+        "evolution": null,
+        "spawn": "Spawns in forest, Hero of Many Battles or Crowned Sword",
+        "type": "Fairy"
+    },
+    {
+        "name": "Zamazenta",
+        "evolution": null,
+        "spawn": "Spawns in forest, Hero of Many Battles or Crowned Shield",
+        "type": "Fighting"
+    },
+    {
+        "name": "Eternatus",
+        "evolution": null,
+        "spawn": "Spawns in the end",
+        "type": "Dragon"
+    },
+    {
+        "name": "Kubfu",
+        "evolutions":null,
+        "spawn": "Spawns in custom structures",
+        "type": "Fighting"
+    },
+    {
+        "name": "Urshifu-Single-Strike",
+        "evolution": null,
+        "spawn": "Does not spawn naturally",
+        "type": "Fighting"
+    },
+    {
+        "name": "Urshifu-Rapid-Strike",
+        "evolution": null,
+        "spawn": "Does not spawn naturally",
+        "type": "Fighting"
+    },
+    {
+        "name": "Regieleki",
+        "evolution": null,
+        "spawn": "Spawns in the regieleki-cave or in a custom structure in the desert with regidrago",
+        "type": "Electric"
+    },
+    {
+        "name": "Regidrago",
+        "evolution": null,
+        "spawn": "Spawns in custom structures in the desert with regieleki or in the regidrago-cave",
+        "type": "Dragon"
+    },
+    {
+        "name": "Glastrier",
+        "evolution": null,
+        "spawn": "Spawns in ice biome",
+        "type": "Ice"
+    },
+    {
+        "name": "Spectrier",
+        "evolution": null,
+        "spawn": "Spawns in deep dark and dark forest",
+        "type": "Ghost"
+    },
+    {
+        "name": "Calyrex",
+        "evolution": null,
+        "spawn": "Spawns in custom structures on mushroom island, Normal, Ice Rider, or Shadow Rider",
+        "type": "Psychic"
+    },
+    {
+        "name": "Enamorus",
+        "evolution": null,
+        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "type": "Fairy"
+    },
+    {
+        "name": "Wo-Chien",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Dark"
+    },
+    {
+        "name": "Chien-Pao",
+        "evolution": null,
+        "spawn": "Spawns in ice biome at night",
+        "type": "Ice"
+    },
+    {
+        "name": "Ting-Lu",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Ground"
+    },
+    {
+        "name": "Chi-Yu",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Fire"
+    },
+    {
+        "name": "Roaring Moon",
+        "evolution": null,
+        "spawn": "Spawns in lush cave",
+        "type": "Dragon"
+    },
+    {
+        "name": "Iron Valiant",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Fairy"
+    },
+    {
+        "name": "Koraidon",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Dragon"
+    },
+    {
+        "name": "Miraidon",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Electric"
+    },
+    {
+        "name": "Walking Wake",
+        "evolution": null,
+        "spawn": "Spawns in savanna",
+        "type": "Water"
+    },
+    {
+        "name": "Iron Leaves",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Grass"
+    },
+    {
+        "name": "Ogerpon",
+        "evolution": null,
+        "spawn": "Spawns in custom structures, Teal Mask, Wellspring, Hearthflame, or Cornerstone",
+        "type": "Grass"
+    },
+    {
+        "name": "Okidogi",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Poison"
+    },
+    {
+        "name": "Munkidori",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Poison"
+    },
+    {
+        "name": "Fezandipiti",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Poison"
+    },
+    {
+        "name": "Terapagos",
+        "evolution": null,
+        "spawn": "Spawns in custom structures, Normal, Terastal, or Stellar Form",
+        "type": "Normal"
+    },
+    {
+        "name": "Pecharunt",
+        "evolution": null,
+        "spawn": "Spawns in custom structures",
+        "type": "Poison"
+    }
+]
