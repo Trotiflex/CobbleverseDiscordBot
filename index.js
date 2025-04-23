@@ -158,6 +158,8 @@ function createLegendaryEmbed(page, itemsPerPage = 10) {
 
     for (let i = start; i < end; i++) {
         const l = legendariesData[i];
+        let evolutionText = "";
+        
         if (l.evolution) {
             evolutionText = `Evolves into ${l.evolution.charAt(0).toUpperCase() + l.evolution.slice(1)}`;
         } else if (l.evolutions) {
