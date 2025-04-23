@@ -273,7 +273,7 @@ client.on('interactionCreate', async interaction => {
                 .setColor('#fffa68')
                 .addFields(
                     { name: 'Wiki', value: '[cobbleverse.fandom.com](https://cobbleverse.fandom.com)', inline: true },
-                    { name: 'Discord', value: '[Insert invite link]', inline: true }
+                    { name: 'Discord', value: 'https://discord.gg/kE7wtBgG', inline: true }
                 )
                 .setFooter({ text: 'Explore more with other commands!' })
                 .setTimestamp();
