@@ -2,8 +2,8 @@ import { config } from 'dotenv';
 import { Client, GatewayIntentBits, SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } from 'discord.js';
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v10';
-
-import PokemonData from './src/data/index.js';
+import { readFileSync, existsSync } from 'fs';
+import PokemonData from './src/index.js';
 
 config();
 
@@ -15,12 +15,13 @@ const client = new Client({
     ]
 });
 
+// Charger pokemonData
 let pokemonData = {};
 try {
     pokemonData = PokemonData.pokemon;
     console.log('pokemonData chargé avec', Object.keys(pokemonData).length, 'Pokémon:', Object.keys(pokemonData));
 } catch (error) {
-    console.error('Erreur lors du chargement de pokemon_data.json:', error);
+    console.error('Erreur lors du chargement de pokemonData:', error.message);
     pokemonData = {
         skitty: { evolution: 'delcatty', method: 'Use a Moon Stone' },
         noibat: { evolution: 'noivern', method: 'Reach level 48' },
@@ -29,30 +30,33 @@ try {
     console.log('pokemonData par défaut:', Object.keys(pokemonData));
 }
 
+// Charger championsData
 let championsData = [];
 try {
     championsData = PokemonData.champions;
     console.log('championsData chargé avec', championsData.length, 'champions');
 } catch (error) {
-    console.error('Erreur lors du chargement de cobbleverse_champions.json:', error);
+    console.error('Erreur lors du chargement de championsData:', error.message);
     championsData = [
         { name: 'Brock', order: 1, biome: 'Plains', level_cap: 21 }
     ];
     console.log('championsData par défaut:', championsData.map(c => c.name));
 }
 
+// Charger legendariesData
 let legendariesData = [];
 try {
     legendariesData = PokemonData.legendaries;
     console.log('legendariesData chargé avec', legendariesData.length, 'légendaires');
 } catch (error) {
-    console.error('Erreur lors du chargement de legendaries.json:', error);
+    console.error('Erreur lors du chargement de legendariesData:', error.message);
     legendariesData = [
         { name: 'Articuno', evolution: null, spawn: 'Spawns in ice biomes' }
     ];
     console.log('legendariesData par défaut:', legendariesData.map(l => l.name));
 }
 
+// Charger structuresData
 let structuresData = { structures: { villages_and_associated: [], gyms: [], legendary_structures: [], fossil_dig_sites: [], other_cobblemon_structures: [] } };
 try {
     structuresData = PokemonData.structures;
@@ -60,7 +64,7 @@ try {
         Object.values(structuresData.structures).reduce((total, category) => total + category.length, 0), 
         'structures');
 } catch (error) {
-    console.error('Erreur lors du chargement de cobbleverse_structures.json:', error);
+    console.error('Erreur lors du chargement de structuresData:', error.message);
     structuresData = {
         structures: {
             villages_and_associated: [
@@ -75,99 +79,117 @@ try {
     console.log('structuresData par défaut:', structuresData.structures.villages_and_associated.map(s => s.name));
 }
 
-const starters = [
-    'bulbasaur', 'charmander', 'squirtle',
-    'chikorita', 'cyndaquil', 'totodile',
-    'treecko', 'torchic', 'mudkip',
-    'turtwig', 'chimchar', 'piplup',
-    'snivy', 'tepig', 'oshawott',
-    'chespin', 'fennekin', 'froakie',
-    'rowlet', 'litten', 'popplio',
-    'grookey', 'scorbunny', 'sobble',
-    'sprigatito', 'fuecoco', 'quaxly'
-];
+// Charger starterData depuis starter.json
+let starterData = [];
+try {
+    const starterFilePath = './src/data/starter.json';
+    if (!existsSync(starterFilePath)) {
+        throw new Error(`Le fichier ${starterFilePath} n'existe pas. Veuillez créer le fichier dans le dossier data/.`);
+    }
+    const starterJson = JSON.parse(readFileSync(starterFilePath, 'utf8'));
+    if (starterJson.starters && Array.isArray(starterJson.starters)) {
+        starterData = starterJson.starters;
+        console.log('starterData chargé avec', starterData.length, 'régions:', starterData.map(r => r.name));
+    } else {
+        throw new Error('Clé starters manquante ou invalide dans starter.json');
+    }
+} catch (error) {
+    console.error('Erreur lors du chargement de starter.json:', error.message);
+    starterData = [
+        {
+            name: 'paldea',
+            displayName: 'cobblemon.starterselection.category.paldea',
+            pokemon: [
+                'Fuecoco level=5',
+                'Quaxly level=5',
+                'Sprigatito level=5'
+            ]
+        }
+    ];
+    console.log('starterData par défaut chargé avec', starterData.length, 'régions:', starterData.map(r => r.name));
+}
 
+// Fonction pour formater les Pokémon
+function formatPokemon(pokemon) {
+    // Supprimer "level=5" et formater les Pokéballs
+    let formatted = pokemon.replace(/level=5\s*/g, '').trim();
+    formatted = formatted.replace(/pokeball=([\w_]+)/g, '**$1**');
+    // Mettre en majuscule la première lettre du nom du Pokémon
+    const [name, ...rest] = formatted.split(' ');
+    return `${name.charAt(0).toUpperCase() + name.slice(1)} ${rest.join(' ')}`.trim();
+}
+
+// Fonction pour l’embed légendaire
 async function createLegendaryEmbed(page, itemsPerPage = 10) {
     const start = page * itemsPerPage;
     const end = Math.min(start + itemsPerPage, legendariesData.length);
     const embed = new EmbedBuilder()
-        .setTitle('Legendary Pokémon in Cobbleverse')
-        .setDescription(`List of all legendary Pokémon, their spawn locations, and evolution details in Cobbleverse. (Page ${page + 1}/${Math.ceil(legendariesData.length / itemsPerPage)})`)
+        .setTitle('Pokémon Légendaires dans Cobbleverse')
+        .setDescription(`Liste de tous les Pokémon légendaires, leurs lieux d’apparition et détails d’évolution. (Page ${page + 1}/${Math.ceil(legendariesData.length / itemsPerPage)})`)
         .setColor('#fffa68')
-        .setFooter({ text: 'Use /legendary [pokemon] for specific details!' })
+        .setFooter({ text: 'Utilisez /legendary [pokemon] pour des détails spécifiques !' })
         .setTimestamp();
 
     for (let i = start; i < end; i++) {
         const l = legendariesData[i];
         let evolutionText = "";
         if (l.evolution) {
-            evolutionText = `Evolves into ${l.evolution.charAt(0).toUpperCase() + l.evolution.slice(1)}`;
+            evolutionText = `Évolue en ${l.evolution.charAt(0).toUpperCase() + l.evolution.slice(1)}`;
         } else if (l.evolutions) {
-            evolutionText = l.evolutions.map(evo => `Evolves into ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)}: ${evo.method}`).join('\n');
+            evolutionText = l.evolutions.map(evo => `Évolue en ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)} : ${evo.method}`).join('\n');
         }
         embed.addFields({
             name: l.name,
-            value: `Spawn: ${l.spawn}\nEvolution: ${evolutionText || 'Does not evolve'}`,
+            value: `Apparition : ${l.spawn}\nÉvolution : ${evolutionText || 'N’évolue pas'}`,
             inline: false
         });
     }
     return embed;
 }
 
+// Définir les commandes
+const commands = [
+    new SlashCommandBuilder()
+        .setName('evolve')
+        .setDescription('Vérifie comment un Pokémon évolue')
+        .addStringOption(option =>
+            option.setName('pokemon')
+                .setDescription('Nom du Pokémon')
+                .setRequired(true)),
+    new SlashCommandBuilder()
+        .setName('locate')
+        .setDescription('Localise une structure dans Cobbleverse')
+        .addStringOption(option =>
+            option.setName('structure')
+                .setDescription('Nom de la structure (ex. Village Custom, Sky Pillar)')
+                .setRequired(true)
+                .setAutocomplete(true)),
+    new SlashCommandBuilder()
+        .setName('cobbleverse')
+        .setDescription('Obtient des informations sur le modpack Cobbleverse'),
+    new SlashCommandBuilder()
+        .setName('starter')
+        .setDescription('Affiche les Pokémon de départ dans Cobbleverse'),
+    new SlashCommandBuilder()
+        .setName('champions')
+        .setDescription('Liste tous les champions ou donne les détails d’un champion spécifique')
+        .addStringOption(option =>
+            option.setName('champion')
+                .setDescription('Nom du champion (ex. Brock)')
+                .setRequired(false)),
+    new SlashCommandBuilder()
+        .setName('legendary')
+        .setDescription('Liste tous les Pokémon légendaires ou donne les détails d’un légendaire')
+        .addStringOption(option =>
+            option.setName('pokemon')
+                .setDescription('Nom du Pokémon légendaire (ex. Articuno)')
+                .setRequired(false))
+].map(command => command.toJSON());
+
+// Enregistrer les commandes
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 client.once('ready', async () => {
     console.log(`Connecté en tant que ${client.user.tag}`);
-
-    const commands = [
-        new SlashCommandBuilder()
-            .setName('evolve')
-            .setDescription('Check how a Pokémon evolves')
-            .addStringOption(option =>
-                option.setName('pokemon')
-                    .setDescription('The Pokémon name')
-                    .setRequired(true)
-            ),
-        new SlashCommandBuilder()
-            .setName('locate')
-            .setDescription('Locate a structure in Cobbleverse')
-            .addStringOption(option =>
-                option.setName('structure')
-                    .setDescription('The structure name (e.g., Custom Village, Sky Pillar)')
-                    .setRequired(true)
-                    .setAutocomplete(true)
-            ),
-        new SlashCommandBuilder()
-            .setName('cobbleverse')
-            .setDescription('Get info about Cobbleverse'),
-        new SlashCommandBuilder()
-            .setName('starter')
-            .setDescription('List all starter Pokémon available in Cobbleverse'),
-        new SlashCommandBuilder()
-            .setName('champions')
-            .setDescription('List all Cobbleverse champions or get details for a specific champion')
-            .addStringOption(option =>
-                option.setName('champion')
-                    .setDescription('The champion name (optional, e.g., Brock)')
-                    .setRequired(false)
-            ),
-        new SlashCommandBuilder()
-            .setName('legendary')
-            .setDescription('List all legendary Pokémon or get details for a specific legendary')
-            .addStringOption(option =>
-                option.setName('pokemon')
-                    .setDescription('The legendary Pokémon name (optional, e.g., Articuno)')
-                    .setRequired(false)
-            ),
-        // new SlashCommandBuilder()
-        //     .setName('rag')
-        //     .setDescription('Ask a question about Cobbleverse with RAG')
-        //     .addStringOption(option =>
-        //         option.setName('query')
-        //             .setDescription('Your question about Cobbleverse')
-        //             .setRequired(true)
-        //     )
-    ].map(command => command.toJSON());
-
-    const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
     try {
         await rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID), { body: commands });
         console.log('Commandes enregistrées !');
@@ -176,6 +198,7 @@ client.once('ready', async () => {
     }
 });
 
+// Gestion des interactions
 client.on('interactionCreate', async interaction => {
     if (interaction.isCommand()) {
         const { commandName, options } = interaction;
@@ -186,15 +209,15 @@ client.on('interactionCreate', async interaction => {
             if (pokemonData[pokemonName]) {
                 const data = pokemonData[pokemonName];
                 const embed = new EmbedBuilder()
-                    .setTitle('Pokémon Evolution')
+                    .setTitle('Évolution de Pokémon')
                     .setDescription(`**${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}**`)
                     .setColor('#fffa68')
-                    .setFooter({ text: 'Try another Pokémon with /evolve [pokemon]!' })
+                    .setFooter({ text: 'Essayez un autre Pokémon avec /evolve [pokemon] !' })
                     .setTimestamp();
                 if (data.evolution) {
                     embed.addFields(
-                        { name: 'Evolves Into', value: data.evolution.charAt(0).toUpperCase() + data.evolution.slice(1), inline: true },
-                        { name: 'Method', value: data.method, inline: true }
+                        { name: 'Évolue en', value: data.evolution.charAt(0).toUpperCase() + data.evolution.slice(1), inline: true },
+                        { name: 'Méthode', value: data.method, inline: true }
                     );
                 } else if (data.evolutions) {
                     data.evolutions.forEach(evo => {
@@ -205,25 +228,16 @@ client.on('interactionCreate', async interaction => {
                         });
                     });
                 } else {
-                    embed.addFields({ name: 'Evolution', value: `Does not evolve: ${data.method}` });
+                    embed.addFields({ name: 'Évolution', value: `N’évolue pas : ${data.method}` });
                 }
-                try {
-                    await interaction.reply({ embeds: [embed] });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse à /evolve:', error);
-                }
+                await interaction.reply({ embeds: [embed] });
             } else {
                 const embed = new EmbedBuilder()
-                    .setTitle('Error')
-                    .setDescription(`Sorry, I don't have data for **${pokemonName}**. Try another Pokémon!`)
+                    .setTitle('Erreur')
+                    .setDescription(`Désolé, aucune donnée pour **${pokemonName}**. Essayez un autre Pokémon !`)
                     .setColor('#ff0000')
                     .setTimestamp();
-                try {
-                    await interaction.reply({ embeds: [embed], ephemeral: true });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse d\'erreur à /evolve:', error);
-                    await interaction.reply({ embeds: [embed] });
-                }
+                await interaction.reply({ embeds: [embed], ephemeral: true });
             }
         } else if (commandName === 'locate') {
             const structureName = options.getString('structure');
@@ -235,10 +249,10 @@ client.on('interactionCreate', async interaction => {
             if (structure) {
                 const biomes = structure.biomes.join(', ');
                 const instructions = structure.name === 'Custom Village' ? 
-                    'Use `/locate structure bca:custom_village` in-game to find the nearest village.' :
+                    'Utilisez `/locate structure bca:custom_village` en jeu pour trouver le village le plus proche.' :
                     structure.name === 'Arena' ?
-                    'Use `/locate structure cobbleverse:arena` in-game to find the nearest arena. Check near villages in plains or aquatic biomes!' :
-                    'Explore the listed biomes or use a cartographer map to locate this structure.';
+                    'Utilisez `/locate structure cobbleverse:arena` en jeu pour trouver l’arène la plus proche. Cherchez près des villages dans les biomes plaines ou aquatiques !' :
+                    'Explorez les biomes listés ou utilisez une carte de cartographe pour localiser cette structure.';
                 const embed = new EmbedBuilder()
                     .setTitle(structure.name)
                     .setDescription(structure.description)
@@ -247,64 +261,59 @@ client.on('interactionCreate', async interaction => {
                         { name: 'Biomes', value: biomes, inline: true },
                         { name: 'Instructions', value: instructions, inline: true }
                     )
-                    .setFooter({ text: 'Try another structure with /locate [structure]!' })
+                    .setFooter({ text: 'Essayez une autre structure avec /locate [structure] !' })
                     .setTimestamp();
-                try {
-                    await interaction.reply({ embeds: [embed] });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse à /locate:', error);
-                }
+                await interaction.reply({ embeds: [embed] });
             } else {
                 const embed = new EmbedBuilder()
-                    .setTitle('Error')
-                    .setDescription(`Unknown structure: **${structureName}**. Try 'Custom Village', 'Sky Pillar', or 'Brock's Gym'.`)
+                    .setTitle('Erreur')
+                    .setDescription(`Structure inconnue : **${structureName}**. Essayez "Custom Village", "Sky Pillar" ou "Brock's Gym".`)
                     .setColor('#ff0000')
                     .setTimestamp();
-                try {
-                    await interaction.reply({ embeds: [embed], ephemeral: true });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse d\'erreur à /locate:', error);
-                    await interaction.reply({ embeds: [embed] });
-                }
+                await interaction.reply({ embeds: [embed], ephemeral: true });
             }
         } else if (commandName === 'cobbleverse') {
             const embed = new EmbedBuilder()
-                .setTitle('About Cobbleverse')
-                .setDescription('**Cobbleverse** is a modpack based on Cobblemon, featuring 965+ Pokémon, custom structures, arenas, and champions!')
+                .setTitle('À Propos de Cobbleverse')
+                .setDescription('**Cobbleverse** est un modpack basé sur Cobblemon, avec 965+ Pokémon, des structures personnalisées, des arènes et des champions !')
                 .setColor('#fffa68')
                 .addFields(
                     { name: 'Wiki', value: '[cobbleverse.fandom.com](https://cobbleverse.fandom.com)', inline: true },
                     { name: 'Discord', value: 'https://discord.gg/kE7wtBgG', inline: true }
                 )
-                .setFooter({ text: 'Explore more with other commands!' })
+                .setFooter({ text: 'Explorez plus avec d’autres commandes !' })
                 .setTimestamp();
-            try {
-                await interaction.reply({ embeds: [embed] });
-            } catch (error) {
-                console.error('Erreur lors de la réponse à /cobbleverse:', error);
-            }
+            await interaction.reply({ embeds: [embed] });
         } else if (commandName === 'starter') {
-            const embed = new EmbedBuilder()
-                .setTitle('Available Starters in Cobbleverse')
-                .setDescription('List of all starter Pokémon across generations available in Cobbleverse.')
-                .setColor('#fffa68')
-                .addFields(
-                    { name: 'Gen 1', value: starters.slice(0, 3).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 2', value: starters.slice(3, 6).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 3', value: starters.slice(6, 9).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 4', value: starters.slice(9, 12).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 5', value: starters.slice(12, 15).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 6', value: starters.slice(15, 18).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 7', value: starters.slice(18, 21).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 8', value: starters.slice(21, 24).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true },
-                    { name: 'Gen 9', value: starters.slice(24, 27).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', '), inline: true }
-                )
-                .setFooter({ text: 'Use /evolve [pokemon] to check their evolutions!' })
-                .setTimestamp();
             try {
+                let description = 'Voici les Pokémon de départ disponibles dans **Cobbleverse** :\n\n';
+                if (starterData.length === 0) {
+                    description += 'Aucun Pokémon de départ disponible. Contactez un administrateur.';
+                } else {
+                    starterData.forEach(region => {
+                        const regionName = region.name.toUpperCase();
+                        description += `**Région : ${regionName}**\n`;
+                        description += region.pokemon.map(p => `- ${formatPokemon(p)}`).join('\n') + '\n';
+                        description += '_Tous les Pokémon sont au niveau 5_\n\n';
+                    });
+                }
+
+                const embed = new EmbedBuilder()
+                    .setTitle('🌟 Pokémon de Départ dans Cobbleverse 🌟')
+                    .setDescription(description)
+                    .setColor('#fffa68')
+                    .setTimestamp()
+                    .setFooter({ text: 'Cobbleverse Modpack | Basé sur Cobblemon' });
+
                 await interaction.reply({ embeds: [embed] });
             } catch (error) {
-                console.error('Erreur lors de la réponse à /starter:', error);
+                console.error('Erreur lors de la commande /starter:', error);
+                const embed = new EmbedBuilder()
+                    .setTitle('❌ Erreur')
+                    .setDescription('Impossible de charger les Pokémon de départ. Contactez un administrateur.')
+                    .setColor('#ff0000')
+                    .setTimestamp();
+                await interaction.reply({ embeds: [embed], ephemeral: true });
             }
         } else if (commandName === 'champions') {
             const championName = options.getString('champion')?.toLowerCase();
@@ -316,50 +325,37 @@ client.on('interactionCreate', async interaction => {
                         .setTitle(champion.name)
                         .setColor('#fffa68')
                         .addFields(
-                            { name: 'Order', value: champion.order.toString(), inline: true },
+                            { name: 'Ordre', value: champion.order.toString(), inline: true },
                             { name: 'Biome', value: champion.biome, inline: true },
-                            { name: 'Level Cap', value: `${champion.level_cap}${note}`, inline: true }
+                            { name: 'Niveau Max', value: `${champion.level_cap}${note}`, inline: true }
                         )
-                        .setFooter({ text: 'Use /champions to see all champions!' })
+                        .setFooter({ text: 'Utilisez /champions pour voir tous les champions !' })
                         .setTimestamp();
-                    try {
-                        await interaction.reply({ embeds: [embed] });
-                    } catch (error) {
-                        console.error('Erreur lors de la réponse à /champions (spécifique):', error);
-                    }
+                    await interaction.reply({ embeds: [embed] });
                 } else {
                     const embed = new EmbedBuilder()
-                        .setTitle('Error')
-                        .setDescription(`Sorry, I don't have data for **${championName}**. Try another champion (e.g., Brock, Misty)!`)
+                        .setTitle('Erreur')
+                        .setDescription(`Désolé, aucune donnée pour **${championName}**. Essayez un autre champion (ex. Brock, Misty) !`)
                         .setColor('#ff0000')
                         .setTimestamp();
-                    try {
-                        await interaction.reply({ embeds: [embed], ephemeral: true });
-                    } catch (error) {
-                        console.error('Erreur lors de la réponse d\'erreur à /champions:', error);
-                        await interaction.reply({ embeds: [embed] });
-                    }
+                    await interaction.reply({ embeds: [embed], ephemeral: true });
                 }
             } else {
                 const embed = new EmbedBuilder()
-                    .setTitle('All Champions in Cobbleverse')
-                    .setDescription('List of all champions, their order, biomes, and level caps in Cobbleverse.')
+                    .setTitle('Tous les Champions dans Cobbleverse')
+                    .setDescription('Liste de tous les champions, leur ordre, biomes et niveaux maximum dans Cobbleverse.')
                     .setColor('#fffa68')
-                    .setFooter({ text: 'Use /champions [champion] for specific details!' })
+                    .setFooter({ text: 'Utilisez /champions [champion] pour des détails spécifiques !' })
                     .setTimestamp();
                 championsData.forEach(c => {
                     const note = c.note ? ` (${c.note})` : '';
                     embed.addFields({
                         name: c.name,
-                        value: `Order: ${c.order}, Biome: ${c.biome}, Level Cap: ${c.level_cap}${note}`,
+                        value: `Ordre : ${c.order}, Biome : ${c.biome}, Niveau Max : ${c.level_cap}${note}`,
                         inline: false
                     });
                 });
-                try {
-                    await interaction.reply({ embeds: [embed] });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse à /champions (liste):', error);
-                }
+                await interaction.reply({ embeds: [embed] });
             }
         } else if (commandName === 'legendary') {
             const pokemonName = options.getString('pokemon')?.toLowerCase();
@@ -370,48 +366,39 @@ client.on('interactionCreate', async interaction => {
                         .setTitle(legendary.name)
                         .setColor('#fffa68')
                         .addFields(
-                            { name: 'Spawn', value: legendary.spawn, inline: true }
+                            { name: 'Apparition', value: legendary.spawn, inline: true }
                         )
-                        .setFooter({ text: 'Use /legendary to see all legendaries!' })
+                        .setFooter({ text: 'Utilisez /legendary pour voir tous les légendaires !' })
                         .setTimestamp();
                     if (legendary.evolution) {
                         embed.addFields({
-                            name: 'Evolution',
-                            value: `Evolves into ${legendary.evolution.charAt(0).toUpperCase() + legendary.evolution.slice(1)}`,
+                            name: 'Évolution',
+                            value: `Évolue en ${legendary.evolution.charAt(0).toUpperCase() + legendary.evolution.slice(1)}`,
                             inline: true
                         });
                     } else if (legendary.evolutions) {
                         legendary.evolutions.forEach(evo => {
                             embed.addFields({
-                                name: 'Evolution',
-                                value: `Evolves into ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)}: ${evo.method}`,
+                                name: 'Évolution',
+                                value: `Évolue en ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)} : ${evo.method}`,
                                 inline: true
                             });
                         });
                     } else {
                         embed.addFields({
-                            name: 'Evolution',
-                            value: 'Does not evolve',
+                            name: 'Évolution',
+                            value: 'N’évolue pas',
                             inline: true
                         });
                     }
-                    try {
-                        await interaction.reply({ embeds: [embed] });
-                    } catch (error) {
-                        console.error('Erreur lors de la réponse à /legendary (spécifique):', error);
-                    }
+                    await interaction.reply({ embeds: [embed] });
                 } else {
                     const embed = new EmbedBuilder()
-                        .setTitle('Error')
-                        .setDescription(`Sorry, I don't have data for **${pokemonName}**. Try another legendary (e.g., Articuno, Mewtwo)!`)
+                        .setTitle('Erreur')
+                        .setDescription(`Désolé, aucune donnée pour **${pokemonName}**. Essayez un autre légendaire (ex. Articuno, Mewtwo) !`)
                         .setColor('#ff0000')
                         .setTimestamp();
-                    try {
-                        await interaction.reply({ embeds: [embed], ephemeral: true });
-                    } catch (error) {
-                        console.error('Erreur lors de la réponse d\'erreur à /legendary:', error);
-                        await interaction.reply({ embeds: [embed] });
-                    }
+                    await interaction.reply({ embeds: [embed], ephemeral: true });
                 }
             } else {
                 const itemsPerPage = 10;
@@ -431,13 +418,7 @@ client.on('interactionCreate', async interaction => {
 
                 let currentPage = 0;
                 const embed = await createLegendaryEmbed(currentPage, itemsPerPage);
-                let message;
-                try {
-                    message = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
-                } catch (error) {
-                    console.error('Erreur lors de la réponse à /legendary (pagination):', error);
-                    return;
-                }
+                const message = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
 
                 const filter = i => i.user.id === interaction.user.id && ['prev', 'next'].includes(i.customId);
                 const collector = message.createMessageComponentCollector({ filter, time: 60000 });
@@ -453,59 +434,14 @@ client.on('interactionCreate', async interaction => {
                     nextButton.setDisabled(currentPage === totalPages - 1);
 
                     const newEmbed = await createLegendaryEmbed(currentPage, itemsPerPage);
-                    try {
-                        await i.update({ embeds: [newEmbed], components: [row] });
-                    } catch (error) {
-                        console.error('Erreur lors de la mise à jour de /legendary (pagination):', error);
-                    }
+                    await i.update({ embeds: [newEmbed], components: [row] });
                 });
 
                 collector.on('end', async () => {
                     prevButton.setDisabled(true);
                     nextButton.setDisabled(true);
-                    try {
-                        await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
-                    } catch (error) {
-                        console.error('Erreur lors de la désactivation des boutons de /legendary:', error);
-                    }
+                    await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
                 });
-            }
-        } else if (commandName === 'rag') {
-            const query = options.getString('query');
-            try {
-                const vectorStore = await embedding.getVectorStore();
-                if (!vectorStore) {
-                    const embed = new EmbedBuilder()
-                        .setTitle('Erreur')
-                        .setDescription('La base de connaissances n’est pas initialisée. Vérifiez que cobbleverse_guide.md existe et qu’Ollama fonctionne.')
-                        .setColor('#ff0000')
-                        .setTimestamp();
-                    await interaction.reply({ embeds: [embed], ephemeral: true });
-                    return;
-                }
-
-                const { result } = await embedding.search(query, 2);
-                const context = result.map(doc => doc.pageContent).join('\n\n');
-
-                const response = await ollama.chat({
-                    model: configJson.LLM_MODEL,
-                    messages: [
-                        { role: 'system', content: 'You are a helpful assistant for the Cobbleverse modpack. Use the provided context to answer questions accurately.' },
-                        { role: 'user', content: `Context: ${context}\n\nQuestion: ${query}` },
-                    ],
-                });
-
-                const answer = response.message.content;
-
-                const embed = new EmbedBuilder()
-                    .setTitle('Cobbleverse RAG Answer')
-                    .setDescription(answer)
-                    .setColor('#fffa68')
-                    .setTimestamp();
-                await interaction.reply({ embeds: [embed] });
-            } catch (error) {
-                console.error('Erreur lors du traitement RAG:', error);
-                await interaction.reply({ content: 'Erreur lors de la génération de la réponse. Vérifiez qu’Ollama est en cours d’exécution.', ephemeral: true });
             }
         }
     } else if (interaction.isAutocomplete()) {
@@ -521,13 +457,9 @@ client.on('interactionCreate', async interaction => {
             const filtered = structureNames
                 .filter(name => name.toLowerCase().includes(focusedValue.toLowerCase()))
                 .slice(0, 25);
-            try {
-                await interaction.respond(
-                    filtered.map(name => ({ name, value: name }))
-                );
-            } catch (error) {
-                console.error('Erreur lors de l\'autocomplétion de /locate:', error);
-            }
+            await interaction.respond(
+                filtered.map(name => ({ name, value: name }))
+            );
         }
     }
 });
