@@ -538,7 +538,7 @@ client.on('interactionCreate', async interaction => {
                 await interaction.respond(
                     filtered.map(name => ({ name, value: name }))
                 );
- autocorrelation
+
             }
         }
     } catch (error) {
