@@ -14,13 +14,13 @@
     {
         "name": "Moltres",
         "evolution": null,
-        "spawn": "Spawns in volcanic biomes",
+        "spawn": "Spawns in volcanic biomes and mountains",
         "type": "Fire"
     },
     {
         "name": "Mewtwo",
         "evolution": null,
-        "spawn": "Spawns in the overworld",
+        "spawn": "Spawns in the overworld and you can evolve mew in mewtwo if you have defeat the ligue",
         "type": "Psychic"
     },
     {
@@ -32,19 +32,19 @@
     {
         "name": "Raikou",
         "evolution": null,
-        "spawn": "Spawns in plains or savanna",
+        "spawn": "burned tower",
         "type": "Electric"
     },
     {
         "name": "Entei",
         "evolution": null,
-        "spawn": "Spawns in volcanic biomes",
+        "spawn": "burned tower",
         "type": "Fire"
     },
     {
         "name": "Suicune",
         "evolution": null,
-        "spawn": "Spawns in aquatic biomes",
+        "spawn": "burned tower",
         "type": "Water"
     },
     {
@@ -122,7 +122,7 @@
     {
         "name": "Deoxys",
         "evolution": null,
-        "spawn": "Spawns in the birth island",
+        "spawn": "Spawns in the birth island and end",
         "type": "Psychic"
     },
     {
@@ -140,7 +140,7 @@
     {
         "name": "Azelf",
         "evolution": null,
-        "spawn": "Spawns in custom river",
+        "spawn": "Spawns in  river",
         "type": "Psychic"
     },
     {
@@ -176,7 +176,7 @@
     {
         "name": "Cresselia",
         "evolution": null,
-        "spawn": "Spawns in floral biome with natural flower",
+        "spawn": "Spawns in floral biome with natural flower and a full moon at night",
         "type": "Psychic"
     },
     {
@@ -236,13 +236,13 @@
     {
         "name": "Tornadus",
         "evolution": null,
-        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "spawn": "Spawns in ocean, Incarnate or Therian Form",
         "type": "Flying"
     },
     {
         "name": "Thundurus",
         "evolution": null,
-        "spawn": "Spawns in savanna, Incarnate or Therian Form",
+        "spawn": "Spawns in plains, Incarnate or Therian Form",
         "type": "Electric"
     },
     {
@@ -272,7 +272,7 @@
     {
         "name": "Keldeo",
         "evolution": null,
-        "spawn": "Spawns in river or mountain or sword mountain",
+        "spawn": "Spawns in plain or mountain or sword mountain",
         "type": "Water"
     },
     {
@@ -308,13 +308,13 @@
     {
         "name": "Diancie",
         "evolution": null,
-        "spawn": "Spawns in deep dark",
+        "spawn": "Spawns in amethyst alcove",
         "type": "Fairy"
     },
     {
         "name": "Hoopa",
         "evolution": null,
-        "spawn": "Spawns in the end, Confined or Unbound Form",
+        "spawn": "Spawns in the end, Confined Form",
         "type": "Psychic"
     },
     {
@@ -377,7 +377,7 @@
     {
         "name": "Necrozma",
         "evolution": null,
-        "spawn": "Spawns in the end tower, in the end or dark forest, Normal, Dusk Mane, Dawn Wings, or Ultra Form",
+        "spawn": "Spawns in the Megalo tower, in the end or dark forest, Normal, Dusk Mane, Dawn Wings, or Ultra Form",
         "type": "Psychic"
     },
     {
@@ -419,7 +419,7 @@
     {
         "name": "Kubfu",
         "evolutions":null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in plains and forest",
         "type": "Fighting"
     },
     {
@@ -449,7 +449,7 @@
     {
         "name": "Glastrier",
         "evolution": null,
-        "spawn": "Spawns in ice biome",
+        "spawn": "Spawns in ice spikes biome",
         "type": "Ice"
     },
     {
@@ -485,19 +485,19 @@
     {
         "name": "Ting-Lu",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in mountains",
         "type": "Ground"
     },
     {
         "name": "Chi-Yu",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in Nether Wastes",
         "type": "Fire"
     },
     {
         "name": "Roaring Moon",
         "evolution": null,
-        "spawn": "Spawns in lush cave",
+        "spawn": "Spawns in beach coast",
         "type": "Dragon"
     },
     {
@@ -533,25 +533,25 @@
     {
         "name": "Ogerpon",
         "evolution": null,
-        "spawn": "Spawns in custom structures, Teal Mask, Wellspring, Hearthflame, or Cornerstone",
+        "spawn": "Spawns in ocean, jungle and nether , Teal Mask, Wellspring, Hearthflame, or Cornerstone",
         "type": "Grass"
     },
     {
         "name": "Okidogi",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in Jungle",
         "type": "Poison"
     },
     {
         "name": "Munkidori",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in Jungle",
         "type": "Poison"
     },
     {
         "name": "Fezandipiti",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in Jungle",
         "type": "Poison"
     },
     {
@@ -563,7 +563,13 @@
     {
         "name": "Pecharunt",
         "evolution": null,
-        "spawn": "Spawns in custom structures",
+        "spawn": "Spawns in dark Forest",
+        "type": "Poison"
+    },
+    {
+        "name": "meltan",
+        "evolution": "melmetal",
+        "spawn": "Spawns in beach",
         "type": "Poison"
     }
 ]

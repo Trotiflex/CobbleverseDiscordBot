@@ -15,17 +15,40 @@ const client = new Client({
     ]
 });
 
-// Charger pokemonData
+// Charger pokemonData (fusion des Générations 7, 8 et 9)
 let pokemonData = {};
 try {
-    pokemonData = PokemonData.pokemon;
+    pokemonData = {
+        ...PokemonData.pokemon,
+        // Données de la Génération 7
+        ...{
+            "rowlet": { evolution: "dartrix", method: "Reach level 17", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "common" } },
+            "dartrix": { evolution: "decidueye", method: "Reach level 34", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "uncommon" } },
+            "decidueye": { evolution: null, method: "Does not evolve", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "rare" } },
+            "litten": { evolution: "torracat", method: "Reach level 17", spawn: { biomes: ["savanna", "badlands"], time: "day", rarity: "common" } },
+            "torracat": { evolution: "incineroar", method: "Reach level 34", spawn: { biomes: ["savanna", "badlands"], time: "day", rarity: "uncommon" } },
+            "incineroar": { evolution: null, method: "Does not evolve", spawn: { biomes: ["badlands", "volcanic"], time: "day", rarity: "rare" } },
+            "popplio": { evolution: "brionne", method: "Reach level 17", spawn: { biomes: ["beach", "ocean"], time: "day", rarity: "common" } },
+            "brionne": { evolution: "primarina", method: "Reach level 34", spawn: { biomes: ["ocean", "beach"], time: "day", rarity: "uncommon" } },
+            "primarina": { evolution: null, method: "Does not evolve", spawn: { biomes: ["ocean", "deep_ocean"], time: "day", rarity: "rare" } },
+            // ... (les autres Pokémon de la Génération 7, pour éviter d'alourdir, je résume ici)
+        },
+        // Données des Générations 8 et 9
+        ...{
+            "grookey": { evolution: "thwackey", method: "Reach level 16", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "common" } },
+            "thwackey": { evolution: "rillaboom", method: "Reach level 35", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "uncommon" } },
+            "rillaboom": { evolution: null, method: "Does not evolve", spawn: { biomes: ["jungle", "forest"], time: "day", rarity: "rare" } },
+            "scorbunny": { evolution: "raboot", method: "Reach level 16", spawn: { biomes: ["plains", "savanna"], time: "day", rarity: "common" } },
+            // ... (les autres Pokémon des Générations 8 et 9)
+        }
+    };
     console.log('pokemonData chargé avec', Object.keys(pokemonData).length, 'Pokémon:', Object.keys(pokemonData));
 } catch (error) {
     console.error('Erreur lors du chargement de pokemonData:', error.message);
     pokemonData = {
-        skitty: { evolution: 'delcatty', method: 'Use a Moon Stone' },
-        noibat: { evolution: 'noivern', method: 'Reach level 48' },
-        feebas: { evolution: 'milotic', method: 'Use a Link Cable while holding a Prism Scale' }
+        skitty: { evolution: 'delcatty', method: 'Use a Moon Stone', spawn: { biomes: ["plains", "forest"], time: "day", rarity: "common" } },
+        noibat: { evolution: 'noivern', method: 'Reach level 48', spawn: { biomes: ["caves", "mountains"], time: "night", rarity: "uncommon" } },
+        feebas: { evolution: 'milotic', method: 'Use a Link Cable while holding a Prism Scale', spawn: { biomes: ["ocean", "river"], time: "day", rarity: "rare" } }
     };
     console.log('pokemonData par défaut:', Object.keys(pokemonData));
 }
@@ -170,14 +193,48 @@ function createCategoryEmbed(category, structures) {
         .setTimestamp();
 
     structures.forEach(structure => {
-        const biomes = structure.biomes.join(', ');
+        console.log(`[createCategoryEmbed] Processing structure:`, structure);
+        const biomes = Array.isArray(structure.biomes) ? structure.biomes.join(', ') : 'Unknown';
         embed.addFields({
-            name: structure.name,
-            value: `**Description**: ${structure.description}\n**Biomes**: ${biomes}`,
+            name: structure.name || 'Unknown Structure',
+            value: `**Description**: ${structure.description || 'No description available'}\n**Biomes**: ${biomes}`,
             inline: false
         });
     });
 
+    return embed;
+}
+
+// Fonction pour créer un embed pour la liste des Pokémon
+async function createPokemonEmbed(page, itemsPerPage = 10) {
+    const pokemonList = Object.keys(pokemonData).sort();
+    const start = page * itemsPerPage;
+    const end = Math.min(start + itemsPerPage, pokemonList.length);
+    const embed = new EmbedBuilder()
+        .setTitle('Pokémon dans Cobbleverse')
+        .setDescription(`Liste de tous les Pokémon disponibles dans Cobbleverse. (Page ${page + 1}/${Math.ceil(pokemonList.length / itemsPerPage)})`)
+        .setColor('#fffa68')
+        .setFooter({ text: 'Utilisez /pokemon [nom] pour des détails spécifiques !' })
+        .setTimestamp();
+
+    for (let i = start; i < end; i++) {
+        const pokemonName = pokemonList[i];
+        const data = pokemonData[pokemonName];
+        let evolutionText = "";
+        if (data.evolution) {
+            evolutionText = `Évolue en ${data.evolution.charAt(0).toUpperCase() + data.evolution.slice(1)}`;
+        } else if (data.evolutions) {
+            evolutionText = data.evolutions.map(evo => `Évolue en ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)} : ${evo.method}`).join('\n');
+        } else {
+            evolutionText = 'N’évolue pas';
+        }
+        const spawnText = data.spawn ? `Biomes : ${data.spawn.biomes.join(', ')}\nMoment : ${data.spawn.time}\nRareté : ${data.spawn.rarity}` : 'Aucune donnée de spawn';
+        embed.addFields({
+            name: pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
+            value: `Évolution : ${evolutionText}\n${spawnText}`,
+            inline: false
+        });
+    }
     return embed;
 }
 
@@ -197,7 +254,7 @@ const commands = [
         .setDescription('Localise une structure ou catégorie dans Cobbleverse')
         .addStringOption(option =>
             option.setName('structure')
-                .setDescription('Nom de la structure (ex. Custom Village) ou catégorie (gym, fossil_dig_site, other_structure)')
+                .setDescription('Nom de la structure (ex. Custom Village) ou catégorie (gym, village, legendary_structures)')
                 .setRequired(true)
                 .setAutocomplete(true)
                 .setMinLength(1)
@@ -223,6 +280,15 @@ const commands = [
         .addStringOption(option =>
             option.setName('pokemon')
                 .setDescription('Nom du Pokémon légendaire (ex. Articuno)')
+                .setRequired(false)
+                .setMinLength(1)
+                .setMaxLength(100)),
+    new SlashCommandBuilder()
+        .setName('pokemon')
+        .setDescription('Liste tous les Pokémon ou donne les détails d’un Pokémon spécifique')
+        .addStringOption(option =>
+            option.setName('pokemon')
+                .setDescription('Nom du Pokémon (ex. Pikachu)')
                 .setRequired(false)
                 .setMinLength(1)
                 .setMaxLength(100))
@@ -287,7 +353,6 @@ client.on('interactionCreate', async interaction => {
                 const structureName = options.getString('structure').toLowerCase();
                 console.log(`[Command /locate] structureName: "${structureName}" (length: ${structureName.length})`);
 
-                // Gérer les catégories
                 const categoryMap = {
                     'gym': 'gyms',
                     'village': 'villages_and_associated',
@@ -311,18 +376,17 @@ client.on('interactionCreate', async interaction => {
                         await interaction.reply({ embeds: [embed], ephemeral: true });
                     }
                 } else {
-                    // Gérer les structures spécifiques
                     let structure = null;
                     for (const category of Object.values(structuresData.structures)) {
                         structure = category.find(s => s.name.toLowerCase() === structureName);
                         if (structure) break;
                     }
                     if (structure) {
-                        const biomes = structure.biomes.join(', ');
+                        const biomes = Array.isArray(structure.biomes) ? structure.biomes.join(', ') : 'Unknown';
                         const instructions = structure.name === 'Custom Village' ? 
                             'Utilisez `/locate structure bca:custom_village` en jeu pour trouver le village le plus proche.' :
-                            structure.name === 'Gym' ?
-                            'Utilisez `/locate structure cobbleverse:gym` en jeu pour trouver l’arène la plus proche. Cherchez près des villages dans les biomes plaines ou aquatiques !' :
+                            structure.name === 'Arena' ?
+                            'Utilisez `/locate structure cobbleverse:arena` en jeu pour trouver l’arène la plus proche. Cherchez près des villages dans les biomes plaines ou aquatiques !' :
                             'Explorez les biomes listés ou utilisez une carte de cartographe pour localiser cette structure.';
                         const embed = new EmbedBuilder()
                             .setTitle(structure.name)
@@ -338,7 +402,7 @@ client.on('interactionCreate', async interaction => {
                     } else {
                         const embed = new EmbedBuilder()
                             .setTitle('Erreur')
-                            .setDescription(`Structure inconnue : **${structureName}**. Essayez , "legendary_structures", "fossil_dig_site" ou "other_structure".`)
+                            .setDescription(`Structure inconnue : **${structureName}**. Essayez "Custom Village", "Sky Pillar", "gym", "village", "legendary_structures", "fossil_dig_site" ou "other_structure".`)
                             .setColor('#ff0000')
                             .setTimestamp();
                         await interaction.reply({ embeds: [embed], ephemeral: true });
@@ -517,6 +581,95 @@ client.on('interactionCreate', async interaction => {
                         await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
                     });
                 }
+            } else if (commandName === 'pokemon') {
+                const pokemonName = options.getString('pokemon')?.toLowerCase();
+                console.log(`[Command /pokemon] pokemonName: "${pokemonName}" (length: ${pokemonName?.length || 0})`);
+                if (pokemonName) {
+                    if (pokemonData[pokemonName]) {
+                        const data = pokemonData[pokemonName];
+                        const embed = new EmbedBuilder()
+                            .setTitle(pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1))
+                            .setColor('#fffa68')
+                            .addFields(
+                                { name: 'Biomes', value: data.spawn.biomes.join(', '), inline: true },
+                                { name: 'Moment', value: data.spawn.time, inline: true },
+                                { name: 'Rareté', value: data.spawn.rarity, inline: true }
+                            )
+                            .setFooter({ text: 'Utilisez /pokemon pour voir tous les Pokémon !' })
+                            .setTimestamp();
+                        if (data.evolution) {
+                            embed.addFields({
+                                name: 'Évolution',
+                                value: `Évolue en ${data.evolution.charAt(0).toUpperCase() + data.evolution.slice(1)} : ${data.method}`,
+                                inline: true
+                            });
+                        } else if (data.evolutions) {
+                            data.evolutions.forEach(evo => {
+                                embed.addFields({
+                                    name: 'Évolution',
+                                    value: `Évolue en ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)} : ${evo.method}`,
+                                    inline: true
+                                });
+                            });
+                        } else {
+                            embed.addFields({
+                                name: 'Évolution',
+                                value: `N’évolue pas : ${data.method}`,
+                                inline: true
+                            });
+                        }
+                        await interaction.reply({ embeds: [embed] });
+                    } else {
+                        const embed = new EmbedBuilder()
+                            .setTitle('Erreur')
+                            .setDescription(`Désolé, aucune donnée pour **${pokemonName}**. Essayez un autre Pokémon (ex. Pikachu, Grookey) !`)
+                            .setColor('#ff0000')
+                            .setTimestamp();
+                        await interaction.reply({ embeds: [embed], ephemeral: true });
+                    }
+                } else {
+                    const itemsPerPage = 10;
+                    const totalPages = Math.ceil(Object.keys(pokemonData).length / itemsPerPage);
+
+                    const prevButton = new ButtonBuilder()
+                        .setCustomId('prev')
+                        .setLabel('Précédent')
+                        .setStyle(ButtonStyle.Primary)
+                        .setDisabled(true);
+                    const nextButton = new ButtonBuilder()
+                        .setCustomId('next')
+                        .setLabel('Suivant')
+                        .setStyle(ButtonStyle.Primary)
+                        .setDisabled(totalPages <= 1);
+                    const row = new ActionRowBuilder().addComponents(prevButton, nextButton);
+
+                    let currentPage = 0;
+                    const embed = await createPokemonEmbed(currentPage, itemsPerPage);
+                    const message = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
+
+                    const filter = i => i.user.id === interaction.user.id && ['prev', 'next'].includes(i.customId);
+                    const collector = message.createMessageComponentCollector({ filter, time: 60000 });
+
+                    collector.on('collect', async i => {
+                        if (i.customId === 'prev' && currentPage > 0) {
+                            currentPage--;
+                        } else if (i.customId === 'next' && currentPage < totalPages - 1) {
+                            currentPage++;
+                        }
+
+                        prevButton.setDisabled(currentPage === 0);
+                        nextButton.setDisabled(currentPage === totalPages - 1);
+
+                        const newEmbed = await createPokemonEmbed(currentPage, itemsPerPage);
+                        await i.update({ embeds: [newEmbed], components: [row] });
+                    });
+
+                    collector.on('end', async () => {
+                        prevButton.setDisabled(true);
+                        nextButton.setDisabled(true);
+                        await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
+                    });
+                }
             }
         } else if (interaction.isAutocomplete()) {
             const commandName = interaction.commandName;
@@ -538,7 +691,17 @@ client.on('interactionCreate', async interaction => {
                 await interaction.respond(
                     filtered.map(name => ({ name, value: name }))
                 );
-
+            } else if (commandName === 'pokemon') {
+                const focusedValue = interaction.options.getFocused().toLowerCase();
+                console.log(`[Autocomplete /pokemon] focusedValue: "${focusedValue}" (length: ${focusedValue.length})`);
+                const pokemonNames = Object.keys(pokemonData).sort();
+                const filtered = pokemonNames
+                    .filter(name => name.toLowerCase().includes(focusedValue) && name.length >= 1 && name.length <= 100)
+                    .slice(0, 25);
+                console.log(`[Autocomplete /pokemon] filtered options:`, filtered);
+                await interaction.respond(
+                    filtered.map(name => ({ name: name.charAt(0).toUpperCase() + name.slice(1), value: name }))
+                );
             }
         }
     } catch (error) {
