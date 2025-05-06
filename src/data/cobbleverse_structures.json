@@ -1,175 +1,206 @@
 {
   "structures": {
     "villages_and_associated": [
-      {
-        "name": "Custom Village",
-        "biomes": ["Plains", "Savanna", "Taiga"],
-        "description": "Un village personnalisé avec des maisons, un Pokémon Center, une boutique et beaucoup de butin. Peut inclure un centre commercial avec des objets Pokémon."
-      },
+   
       {
         "name": "Small Village",
         "biomes": ["Plains", "Savanna"],
-        "description": "Un petit village avec un Pokémon Center et un Poké Mart."
+        "description": "Un petit village avec un Pokémon Center et un Poké Mart.",
+        "image": "./img/small.png"
       },
       {
         "name": "Medium Village",
         "biomes": ["Plains", "Savanna", "Taiga"],
-        "description": "Un village de taille moyenne avec un Pokémon Center, un Poké Mart et des maisons."
+        "description": "Un village de taille moyenne avec un Pokémon Center, un Poké Mart et des maisons.",
+        "image": "./img/medium.webp"
       },
       {
         "name": "Large Village",
         "biomes": ["Plains", "Savanna", "Taiga"],
-        "description": "Un grand village avec plusieurs Pokémon Centers, Poké Marts et des structures variées."
+        "description": "Un grand village avec plusieurs Pokémon Centers, Poké Marts et des structures variées.",
+        "image": "./img/big.png"
       }
-
     ],
     "gyms": [
       {
         "name": "Brock's Gym",
         "biomes": ["Plains"],
-        "description": "L'arène de Brock, spécialisée dans les Pokémon de type Roche."
+        "description": "L'arène de Brock, spécialisée dans les Pokémon de type Roche.",
+        "image": "./img/brock.webp"
       },
       {
         "name": "Misty's Gym",
         "biomes": ["Aquatic"],
-        "description": "L'arène de Misty, spécialisée dans les Pokémon de type Eau."
+        "description": "L'arène de Misty, spécialisée dans les Pokémon de type Eau.",
+        "image/gui": "./img/misty.webp"
       },
       {
         "name": "Lt. Surge's Gym",
         "biomes": ["Savanna"],
-        "description": "L'arène de Lt. Surge, spécialisée dans les Pokémon de type Électrik."
+        "description": "L'arène de Lt. Surge, spécialisée dans les Pokémon de type Électrik.",
+        "image": "./img/surge.webp"
       },
       {
         "name": "Erika's Gym",
         "biomes": ["Forest"],
-        "description": "L'arène d'Erika, spécialisée dans les Pokémon de type Plante."
+        "description": "L'arène d'Erika, spécialisée dans les Pokémon de type Plante.",
+        "image": "./img/erika.webp"
       },
       {
         "name": "Sabrina's Gym",
         "biomes": ["Dark Forest"],
-        "description": "L'arène de Sabrina, spécialisée dans les Pokémon de type Psy."
+        "description": "L'arène de Sabrina, spécialisée dans les Pokémon de type Psy.",
+        "image": "./img/sabrina.webp"
       },
       {
         "name": "Koga's Gym",
         "biomes": ["Swamp"],
-        "description": "L'arène de Koga, spécialisée dans les Pokémon de type Poison."
+        "description": "L'arène de Koga, spécialisée dans les Pokémon de type Poison.",
+        "image": "./img/koga.webp"
       },
       {
         "name": "Blaine's Gym",
         "biomes": ["Nether"],
-        "description": "L'arène de Blaine, spécialisée dans les Pokémon de type Feu."
+        "description": "L'arène de Blaine, spécialisée dans les Pokémon de type Feu.",
+        "image": "./img/blaine.webp"
       },
       {
         "name": "Giovanni's Gym",
         "biomes": ["Deep Dark"],
-        "description": "L'arène de Giovanni, spécialisée dans les Pokémon de type Sol."
-      }
-
+        "description": "L'arène de Giovanni, spécialisée dans les Pokémon de type Sol.",
+        "image": "./img/giovanni.webp"
+      },
+      {
+      "name": "Elite Four",
+      "biomes": ["End"],
+      "description": "Le conseil 4, disponible dans l'end sur les iles autour de l'ile principale",
+      "image": "./img/elite_four.webp"
+    }
     ],
     "legendary_structures": [
       {
         "name": "Dyna Tree",
         "biomes": ["Plains"],
-        "description": "Un arbre ou apparaissent les 3 oiseaux legendaires de Galar"
+        "description": "Un arbre où apparaissent les 3 oiseaux légendaires de Galar.",
+        "image": "./img/dyna.webp"
       },
       {
         "name": "Iron Cave",
         "biomes": ["Mountain"],
-        "description": "Une grotte où Registeel peut apparaître."
+        "description": "Une grotte où Registeel peut apparaître.",
+        "image": "./img/Iron_cave.webp"
       },
       {
         "name": "Mesa Cave",
         "biomes": ["Mesa"],
-        "description": "Une grotte où Regirock peut apparaître."
+        "description": "Une grotte où Regirock peut apparaître.",
+        "image": "./img/Mesa_cave.webp"
       },
       {
         "name": "Ice Cave",
         "biomes": ["Ice"],
-        "description": "Une grotte où Regice peut apparaître."
+        "description": "Une grotte où Regice peut apparaître.",
+        "image": "./img/Ice_cave_.webp"
       },
       {
         "name": "Regi Temple",
         "biomes": ["Desert"],
-        "description": "Un Temple où Regieleki et regidrago peuvent apparaître."
+        "description": "Un Temple où Regieleki et Regidrago peuvent apparaître.",
+        "image": "./img/Temple.webp"
       },
       {
-        "name": "regidrago Cave",
+        "name": "Regidrago Cave",
         "biomes": ["Underground deep dark"],
-        "description": "Une grotte où Regidrago peut apparaître."
+        "description": "Une grotte où Regidrago peut apparaître.",
+        "image": "./img/regidrago.png"
       },
       {
-        "name": "regieleki Cave",
+        "name": "Regieleki Cave",
         "biomes": ["Desert"],
-        "description": "Une grotte où Regieleki peut apparaître."
+        "description": "Une grotte où Regieleki peut apparaître.",
+        "image": "./img/regieleki.png"
       },
       {
         "name": "Calyrex Structure",
         "biomes": ["Mushroom island"],
-        "description": "Structure associée à Calyrex."
+        "description": "Structure associée à Calyrex.",
+        "image": "./img/mushroom.webp"
       },
       {
-        "name": "Ilex shrine",
+        "name": "Ilex Shrine",
         "biomes": ["Forest"],
-        "description": "Structure associée à Celebi, souvent dans les forêts."
+        "description": "Structure associée à Celebi, souvent dans les forêts.",
+        "image": "./img/ilex.webp"
       },
       {
-        "name": "Birth island",
-        "biomes": ["ocean"],
-        "description": "Structure associée à Deoxys."
+        "name": "Birth Island",
+        "biomes": ["Ocean"],
+        "description": "Structure associée à Deoxys.",
+        "image": "./img/birth.webp"
       },
       {
         "name": "Glacier",
-        "biomes": ["ice spikes"],
-        "description": "Structure associée à Glastrier."
+        "biomes": ["Ice spikes"],
+        "description": "Structure associée à Glastrier.",
+        "image": "./img/glacier.webp"
       },
       {
         "name": "Megalo Tower",
-        "biomes": ["island of the End"],
-        "description": "Structure associée à Necrozma."
+        "biomes": ["Island of the End"],
+        "description": "Structure associée à Necrozma.",
+        "image": "./img/megalo_tower.webp"
       },
       {
         "name": "Sword Mountains",
         "biomes": ["Mountains"],
-        "description": "Structure associée à Keldeo."
+        "description": "Structure associée à Keldeo.",
+        "image": "./img/sword.webp"
       },
       {
         "name": "Snowpoint Temple",
-        "biomes": ["ice"],
-        "description": "Structure associée à Regigigas."
+        "biomes": ["Ice"],
+        "description": "Structure associée à Regigigas.",
+        "image": "./img/snowpoint_temple.webp"
       },
       {
         "name": "Burned Tower",
         "biomes": ["Forest"],
-        "description": "Structure associée à Oh oh ou on peut trouver la plume arc en ciel."
+        "description": "Structure associée à Ho-Oh où on peut trouver la plume arc-en-ciel.",
+        "image": "./img/burned.webp"
       },
       {
         "name": "Bell Tower",
         "biomes": ["Forest"],
-        "description": "Structure associée à Oh oh, cliqué sur le levier au dessus de la cloche avec la plume arc_en_ciel dans la main et Oh oh apparaitra sur le toit de la tour."
+        "description": "Structure associée à Ho-Oh, cliquer sur le levier au-dessus de la cloche avec la plume arc-en-ciel dans la main pour faire apparaître Ho-Oh sur le toit.",
+        "image": "./img/bell.webp"
       }
     ],
     "fossil_dig_sites": [
       {
         "name": "Fossil Dig Site",
         "biomes": ["Desert", "Badlands"],
-        "description": "Un site de fouilles où des fossiles peuvent être trouvés."
+        "description": "Un site de fouilles où des fossiles peuvent être trouvés.",
+        "image": "./img/fossil.png"
       }
     ],
     "other_cobblemon_structures": [
       {
         "name": "Gimmighoul Tower",
-        "biomes": "Overworld",
-        "description": "Une tour contenant un Gimmighoul ou un coffre. Tuer le Gimmighoul donne des pièces."
+        "biomes": ["Overworld"],
+        "description": "Une tour contenant un Gimmighoul ou un coffre. Tuer le Gimmighoul donne des pièces.",
+        "image": "./img/ghimmighoul.webp"
       },
       {
         "name": "Jungle Fortress",
         "biomes": ["Jungle"],
-        "description": "Une forteresse du Nether adaptée au biome de jungle."
+        "description": "Une forteresse du Nether adaptée au biome de jungle.",
+        "image": "./img/fortress.webp"
       },
       {
         "name": "Pokémon Mall",
-        "biomes": "Overworld",
-        "description": "Un centre commercial dans certains villages, vendant des objets Pokémon."
+        "biomes": ["Overworld"],
+        "description": "Un centre commercial dans certains villages, vendant des objets Pokémon.",
+        "image": "./img/mall.png"
       }
     ]
   }

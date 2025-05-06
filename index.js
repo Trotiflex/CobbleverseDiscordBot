@@ -3,6 +3,7 @@ import { Client, GatewayIntentBits, SlashCommandBuilder, EmbedBuilder, ButtonBui
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v10';
 import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
 import PokemonData from './src/index.js';
 
 config();
@@ -20,7 +21,6 @@ let pokemonData = {};
 try {
     pokemonData = {
         ...PokemonData.pokemon,
-        // Données de la Génération 7
         ...{
             "rowlet": { evolution: "dartrix", method: "Reach level 17", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "common" } },
             "dartrix": { evolution: "decidueye", method: "Reach level 34", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "uncommon" } },
@@ -31,15 +31,12 @@ try {
             "popplio": { evolution: "brionne", method: "Reach level 17", spawn: { biomes: ["beach", "ocean"], time: "day", rarity: "common" } },
             "brionne": { evolution: "primarina", method: "Reach level 34", spawn: { biomes: ["ocean", "beach"], time: "day", rarity: "uncommon" } },
             "primarina": { evolution: null, method: "Does not evolve", spawn: { biomes: ["ocean", "deep_ocean"], time: "day", rarity: "rare" } },
-            // ... (les autres Pokémon de la Génération 7, pour éviter d'alourdir, je résume ici)
         },
-        // Données des Générations 8 et 9
         ...{
             "grookey": { evolution: "thwackey", method: "Reach level 16", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "common" } },
             "thwackey": { evolution: "rillaboom", method: "Reach level 35", spawn: { biomes: ["forest", "jungle"], time: "day", rarity: "uncommon" } },
             "rillaboom": { evolution: null, method: "Does not evolve", spawn: { biomes: ["jungle", "forest"], time: "day", rarity: "rare" } },
             "scorbunny": { evolution: "raboot", method: "Reach level 16", spawn: { biomes: ["plains", "savanna"], time: "day", rarity: "common" } },
-            // ... (les autres Pokémon des Générations 8 et 9)
         }
     };
     console.log('pokemonData chargé avec', Object.keys(pokemonData).length, 'Pokémon:', Object.keys(pokemonData));
@@ -79,10 +76,25 @@ try {
     console.log('legendariesData par défaut:', legendariesData.map(l => l.name));
 }
 
-// Charger structuresData
+// Charger structuresData depuis cobbleverse_structures.json
 let structuresData = { structures: { villages_and_associated: [], gyms: [], legendary_structures: [], fossil_dig_sites: [], other_cobblemon_structures: [] } };
 try {
-    structuresData = PokemonData.structures;
+    const structuresFilePath = './src/data/cobbleverse_structures.json';
+    if (!existsSync(structuresFilePath)) {
+        throw new Error(`Le fichier ${structuresFilePath} n'existe pas. Veuillez créer le fichier dans le dossier data/.`);
+    }
+    structuresData = JSON.parse(readFileSync(structuresFilePath, 'utf8'));
+    Object.values(structuresData.structures).forEach(category => {
+        category.forEach(structure => {
+            if (structure.image && !structure.image.startsWith('YOUR_') && !isValidUrl(structure.image)) {
+                const imagePath = join(process.cwd(), structure.image);
+                if (!existsSync(imagePath)) {
+                    console.warn(`Image locale introuvable pour ${structure.name}: ${structure.image}`);
+                    structure.image = null;
+                }
+            }
+        });
+    });
     console.log('structuresData chargé avec', 
         Object.values(structuresData.structures).reduce((total, category) => total + category.length, 0), 
         'structures');
@@ -91,7 +103,12 @@ try {
     structuresData = {
         structures: {
             villages_and_associated: [
-                { name: 'Arena', biomes: ['Plains', 'Aquatic'], description: 'Arena for Pokémon battles.' }
+                { 
+                    name: 'Arena', 
+                    biomes: ['Plains', 'Aquatic'], 
+                    description: 'Arena for Pokémon battles.',
+                    image: null
+                }
             ],
             gyms: [],
             legendary_structures: [],
@@ -132,6 +149,16 @@ try {
     console.log('starterData par défaut chargé avec', starterData.length, 'régions:', starterData.map(r => r.name));
 }
 
+// Fonction pour valider une URL
+function isValidUrl(string) {
+    try {
+        new URL(string);
+        return string.startsWith('http://') || string.startsWith('https://');
+    } catch (_) {
+        return false;
+    }
+}
+
 // Fonction pour formater les Pokémon
 function formatPokemon(pokemon) {
     let formatted = pokemon.replace(/level=5\s*/g, '').trim();
@@ -153,15 +180,21 @@ async function createLegendaryEmbed(page, itemsPerPage = 10) {
 
     for (let i = start; i < end; i++) {
         const l = legendariesData[i];
+        if (!l) {
+            console.warn(`[createLegendaryEmbed] Entrée undefined à l'index ${i}`);
+            continue;
+        }
         let evolutionText = "";
         if (l.evolution) {
             evolutionText = `Évolue en ${l.evolution.charAt(0).toUpperCase() + l.evolution.slice(1)}`;
         } else if (l.evolutions) {
             evolutionText = l.evolutions.map(evo => `Évolue en ${evo.name.charAt(0).toUpperCase() + evo.name.slice(1)} : ${evo.method}`).join('\n');
+        } else {
+            evolutionText = 'N’évolue pas';
         }
         embed.addFields({
-            name: l.name,
-            value: `Apparition : ${l.spawn}\nÉvolution : ${evolutionText || 'N’évolue pas'}`,
+            name: l.name || 'Inconnu',
+            value: `Apparition : ${l.spawn || 'Inconnu'}\nÉvolution : ${evolutionText}`,
             inline: false
         });
     }
@@ -291,7 +324,10 @@ const commands = [
                 .setDescription('Nom du Pokémon (ex. Pikachu)')
                 .setRequired(false)
                 .setMinLength(1)
-                .setMaxLength(100))
+                .setMaxLength(100)),
+    new SlashCommandBuilder()
+        .setName('help')
+        .setDescription('Affiche la liste de toutes les commandes disponibles et leurs descriptions')
 ].map(command => command.toJSON());
 
 // Enregistrer les commandes
@@ -378,7 +414,8 @@ client.on('interactionCreate', async interaction => {
                 } else {
                     let structure = null;
                     for (const category of Object.values(structuresData.structures)) {
-                        structure = category.find(s => s.name.toLowerCase() === structureName);
+                        const validCategory = category.filter(s => typeof s.name === 'string');
+                        structure = validCategory.find(s => s.name.toLowerCase() === structureName);
                         if (structure) break;
                     }
                     if (structure) {
@@ -398,11 +435,27 @@ client.on('interactionCreate', async interaction => {
                             )
                             .setFooter({ text: 'Essayez une autre structure avec /locate [structure] !' })
                             .setTimestamp();
-                        await interaction.reply({ embeds: [embed] });
+
+                        let files = [];
+                        if (structure.image) {
+                            if (isValidUrl(structure.image) && !structure.image.startsWith('YOUR_')) {
+                                embed.setImage(structure.image);
+                            } else if (!structure.image.startsWith('YOUR_')) {
+                                const imagePath = join(process.cwd(), structure.image);
+                                if (existsSync(imagePath)) {
+                                    embed.setImage(`attachment://${structure.image.split('/').pop()}`);
+                                    files.push({ attachment: imagePath, name: structure.image.split('/').pop() });
+                                } else {
+                                    console.warn(`Image locale introuvable pour ${structure.name}: ${structure.image}`);
+                                }
+                            }
+                        }
+
+                        await interaction.reply({ embeds: [embed], files });
                     } else {
                         const embed = new EmbedBuilder()
                             .setTitle('Erreur')
-                            .setDescription(`Structure inconnue : **${structureName}**. Essayez "Custom Village", "Sky Pillar", "gym", "village", "legendary_structures", "fossil_dig_site" ou "other_structure".`)
+                            .setDescription(`Structure inconnue : **${structureName}**. Essayez "Custom Village", "Brock's Gym", "Dyna Tree", "gym", "village", "legendary_structures", "fossil_dig_site" ou "other_structure".`)
                             .setColor('#ff0000')
                             .setTimestamp();
                         await interaction.reply({ embeds: [embed], ephemeral: true });
@@ -539,6 +592,16 @@ client.on('interactionCreate', async interaction => {
                         await interaction.reply({ embeds: [embed], ephemeral: true });
                     }
                 } else {
+                    if (legendariesData.length === 0) {
+                        const embed = new EmbedBuilder()
+                            .setTitle('Erreur')
+                            .setDescription('Aucune donnée sur les Pokémon légendaires disponible. Contactez un administrateur.')
+                            .setColor('#ff0000')
+                            .setTimestamp();
+                        await interaction.reply({ embeds: [embed], ephemeral: true });
+                        return;
+                    }
+                    await interaction.deferReply();
                     const itemsPerPage = 10;
                     const totalPages = Math.ceil(legendariesData.length / itemsPerPage);
 
@@ -556,29 +619,42 @@ client.on('interactionCreate', async interaction => {
 
                     let currentPage = 0;
                     const embed = await createLegendaryEmbed(currentPage, itemsPerPage);
-                    const message = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
+                    const message = await interaction.editReply({ embeds: [embed], components: [row] });
+
+                    console.log('Message object:', message);
 
                     const filter = i => i.user.id === interaction.user.id && ['prev', 'next'].includes(i.customId);
-                    const collector = message.createMessageComponentCollector({ filter, time: 60000 });
+                    const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
 
                     collector.on('collect', async i => {
-                        if (i.customId === 'prev' && currentPage > 0) {
-                            currentPage--;
-                        } else if (i.customId === 'next' && currentPage < totalPages - 1) {
-                            currentPage++;
+                        console.log('[Button Collector] Interaction reçue:', i.customId, i.user.id);
+                        try {
+                            if (i.customId === 'prev' && currentPage > 0) {
+                                currentPage--;
+                            } else if (i.customId === 'next' && currentPage < totalPages - 1) {
+                                currentPage++;
+                            }
+
+                            prevButton.setDisabled(currentPage === 0);
+                            nextButton.setDisabled(currentPage === totalPages - 1);
+
+                            const newEmbed = await createLegendaryEmbed(currentPage, itemsPerPage);
+                            console.log('[Button Collector] Mise à jour de la page:', currentPage + 1);
+                            await i.update({ embeds: [newEmbed], components: [row] });
+                        } catch (error) {
+                            console.error('[Button Collector] Erreur:', error);
+                            collector.stop();
                         }
-
-                        prevButton.setDisabled(currentPage === 0);
-                        nextButton.setDisabled(currentPage === totalPages - 1);
-
-                        const newEmbed = await createLegendaryEmbed(currentPage, itemsPerPage);
-                        await i.update({ embeds: [newEmbed], components: [row] });
                     });
 
                     collector.on('end', async () => {
                         prevButton.setDisabled(true);
                         nextButton.setDisabled(true);
-                        await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
+                        try {
+                            await interaction.editReply({ embeds: [embed], components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
+                        } catch (error) {
+                            console.error('[Collector End] Erreur lors de la mise à jour finale:', error);
+                        }
                     });
                 }
             } else if (commandName === 'pokemon') {
@@ -628,6 +704,7 @@ client.on('interactionCreate', async interaction => {
                         await interaction.reply({ embeds: [embed], ephemeral: true });
                     }
                 } else {
+                    await interaction.deferReply();
                     const itemsPerPage = 10;
                     const totalPages = Math.ceil(Object.keys(pokemonData).length / itemsPerPage);
 
@@ -645,31 +722,96 @@ client.on('interactionCreate', async interaction => {
 
                     let currentPage = 0;
                     const embed = await createPokemonEmbed(currentPage, itemsPerPage);
-                    const message = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
+                    const message = await interaction.editReply({ embeds: [embed], components: [row] });
+
+                    console.log('Message object:', message);
 
                     const filter = i => i.user.id === interaction.user.id && ['prev', 'next'].includes(i.customId);
-                    const collector = message.createMessageComponentCollector({ filter, time: 60000 });
+                    const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
 
                     collector.on('collect', async i => {
-                        if (i.customId === 'prev' && currentPage > 0) {
-                            currentPage--;
-                        } else if (i.customId === 'next' && currentPage < totalPages - 1) {
-                            currentPage++;
+                        console.log('[Button Collector] Interaction reçue:', i.customId, i.user.id);
+                        try {
+                            if (i.customId === 'prev' && currentPage > 0) {
+                                currentPage--;
+                            } else if (i.customId === 'next' && currentPage < totalPages - 1) {
+                                currentPage++;
+                            }
+
+                            prevButton.setDisabled(currentPage === 0);
+                            nextButton.setDisabled(currentPage === totalPages - 1);
+
+                            const newEmbed = await createPokemonEmbed(currentPage, itemsPerPage);
+                            console.log('[Button Collector] Mise à jour de la page:', currentPage + 1);
+                            await i.update({ embeds: [newEmbed], components: [row] });
+                        } catch (error) {
+                            console.error('[Button Collector] Erreur:', error);
+                            collector.stop();
                         }
-
-                        prevButton.setDisabled(currentPage === 0);
-                        nextButton.setDisabled(currentPage === totalPages - 1);
-
-                        const newEmbed = await createPokemonEmbed(currentPage, itemsPerPage);
-                        await i.update({ embeds: [newEmbed], components: [row] });
                     });
 
                     collector.on('end', async () => {
                         prevButton.setDisabled(true);
                         nextButton.setDisabled(true);
-                        await message.edit({ components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
+                        try {
+                            await interaction.editReply({ embeds: [embed], components: [new ActionRowBuilder().addComponents(prevButton, nextButton)] });
+                        } catch (error) {
+                            console.error('[Collector End] Erreur lors de la mise à jour finale:', error);
+                        }
                     });
                 }
+            } else if (commandName === 'help') {
+                const embed = new EmbedBuilder()
+                    .setTitle('📖 Aide - Liste des Commandes')
+                    .setDescription('Voici la liste de toutes les commandes disponibles pour explorer **Cobbleverse** :')
+                    .setColor('#fffa68')
+                    .setTimestamp()
+                    .setFooter({ text: 'Cobbleverse Modpack | Basé sur Cobblemon' });
+
+                embed.addFields(
+                    { 
+                        name: '`/evolve [pokemon]`', 
+                        value: 'Vérifie comment un Pokémon évolue.\n**Exemple** : `/evolve pikachu`', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/locate [structure]`', 
+                        value: 'Localise une structure ou catégorie dans Cobbleverse.\n**Exemple** : `/locate gym` ou `/locate Custom Village`', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/cobbleverse`', 
+                        value: 'Obtient des informations sur le modpack Cobbleverse.', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/starter`', 
+                        value: 'Affiche les Pokémon de départ dans Cobbleverse.', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/champions [champion]`', 
+                        value: 'Liste tous les champions ou donne les détails d’un champion spécifique.\n**Exemple** : `/champions` ou `/champions Brock`', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/legendary [pokemon]`', 
+                        value: 'Liste tous les Pokémon légendaires ou donne les détails d’un légendaire.\n**Exemple** : `/legendary` ou `/legendary Articuno`', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/pokemon [pokemon]`', 
+                        value: 'Liste tous les Pokémon ou donne les détails d’un Pokémon spécifique.\n**Exemple** : `/pokemon` ou `/pokemon Grookey`', 
+                        inline: false 
+                    },
+                    { 
+                        name: '`/help`', 
+                        value: 'Affiche cette liste de toutes les commandes disponibles.', 
+                        inline: false 
+                    }
+                );
+
+                await interaction.reply({ embeds: [embed] });
             }
         } else if (interaction.isAutocomplete()) {
             const commandName = interaction.commandName;
@@ -716,6 +858,8 @@ client.on('interactionCreate', async interaction => {
                 if (!interaction.replied && !interaction.deferred) {
                     await interaction.reply({ embeds: [embed], ephemeral: true });
                 } else if (interaction.deferred) {
+                    await interaction.editReply({ embeds: [embed] });
+                } else {
                     await interaction.followUp({ embeds: [embed], ephemeral: true });
                 }
             } catch (replyError) {
